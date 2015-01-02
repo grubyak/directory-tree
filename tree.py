@@ -14,10 +14,10 @@ def tree(directory, padding = {}, indent = 0):
 	def get_branch(is_last):
 		return '%c-- ' % "|'"[ is_last and 1 or 0 ]
 
-	def get_padding(padding, indent):
+	def get_padding():
 		return ''.join([ padding.get(level, '') for level in xrange(indent) ])
 
-	def update_padding(padding):
+	def update_padding():
 		return dict([ (idx, pad.replace("'", ' ').replace('--', '  ')) for idx, pad in padding.iteritems() ])
 
 	# find list of files and directores inside of the root
@@ -30,22 +30,22 @@ def tree(directory, padding = {}, indent = 0):
 	files_count = len(files)
 
 	# print current root
-	print '%s%s' % (get_padding(padding, indent), basename(root))
+	print '%s%s' % (get_padding(), basename(root))
 
 	# print files from a current root directory
 	if files_count > 0:
-		padding = update_padding(padding)
+		padding = update_padding()
 		indent = indent + 1
 
 		for idx, entry in enumerate(files, 1):
 			padding[indent - 1] = get_branch(idx == files_count and dir_count == 0)
-			print '%s%s' % (get_padding(padding, indent), basename(entry))
+			print '%s%s' % (get_padding(), basename(entry))
 
 		indent = indent - 1
 
 	# recursively print directories
 	if dir_count > 0:
-		padding = update_padding(padding)
+		padding = update_padding()
 		indent = indent + 1
 
 		for idx, entry in enumerate(dirs, 1):
