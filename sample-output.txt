@@ -1,0 +1,3646 @@
+brackets
+|-- .brackets.json
+|-- .gitattributes
+|-- .gitignore
+|-- .gitmodules
+|-- .jshintrc
+|-- .travis.yml
+|-- CONTRIBUTING.md
+|-- Gruntfile.js
+|-- LICENSE
+|-- NOTICE
+|-- package.json
+|-- README.md
+|-- .git
+|   |-- config
+|   |-- description
+|   |-- HEAD
+|   |-- index
+|   |-- packed-refs
+|   |-- shallow
+|   |-- hooks
+|   |   |-- applypatch-msg.sample
+|   |   |-- commit-msg.sample
+|   |   |-- post-update.sample
+|   |   |-- pre-applypatch.sample
+|   |   |-- pre-commit.sample
+|   |   |-- pre-push.sample
+|   |   |-- pre-rebase.sample
+|   |   |-- prepare-commit-msg.sample
+|   |   '-- update.sample
+|   |-- info
+|   |   '-- exclude
+|   |-- logs
+|   |   |-- HEAD
+|   |   '-- refs
+|   |       |-- heads
+|   |       |   '-- master
+|   |       '-- remotes
+|   |           '-- origin
+|   |               '-- HEAD
+|   |-- objects
+|   |   |-- info
+|   |   '-- pack
+|   |       |-- pack-b160fc7933758266afd7055d97ebbc12ae218a7f.idx
+|   |       '-- pack-b160fc7933758266afd7055d97ebbc12ae218a7f.pack
+|   '-- refs
+|       |-- heads
+|       |   '-- master
+|       |-- remotes
+|       |   '-- origin
+|       |       '-- HEAD
+|       '-- tags
+|-- samples
+|   |-- da
+|   |   '-- Kom godt i gang
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- de
+|   |   '-- Erste Schritte
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- el
+|   |   '-- Getting Started
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- es
+|   |   '-- Primeros Pasos
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- fa-ir
+|   |   '-- Getting Started
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- farsiquick-edit.png
+|   |-- fi
+|   |   '-- Aloitus
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- fr
+|   |   '-- Premiers pas
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- id
+|   |   '-- Memulai
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- it
+|   |   '-- Primi passi
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- ja
+|   |   '-- Getting Started
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- nl
+|   |   '-- Aan-de-slag
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- pl
+|   |   '-- Szybki Start
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- pt-br
+|   |   '-- Primeiros Passos
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- pt-pt
+|   |   '-- Primeiros Passos
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- root
+|   |   '-- Getting Started
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- ru
+|   |   '-- Getting Started
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   |-- sv
+|   |   '-- Kom igang
+|   |       |-- index.html
+|   |       |-- main.css
+|   |       '-- screenshots
+|   |           '-- quick-edit.png
+|   '-- zh-tw
+|       '-- Getting Started
+|           |-- index.html
+|           |-- main.css
+|           '-- screenshots
+|               '-- quick-edit.png
+|-- src
+|   |-- brackets.config.json
+|   |-- brackets.js
+|   |-- config.json
+|   |-- dependencies.js
+|   |-- index.html
+|   |-- main.js
+|   |-- strings.js
+|   |-- xorigin.js
+|   |-- base-config
+|   |   '-- keyboard.json
+|   |-- command
+|   |   |-- CommandManager.js
+|   |   |-- Commands.js
+|   |   |-- DefaultMenus.js
+|   |   |-- KeyBindingManager.js
+|   |   '-- Menus.js
+|   |-- document
+|   |   |-- ChangedDocumentTracker.js
+|   |   |-- Document.js
+|   |   |-- DocumentCommandHandlers.js
+|   |   |-- DocumentManager.js
+|   |   |-- InMemoryFile.js
+|   |   '-- TextRange.js
+|   |-- editor
+|   |   |-- CodeHintList.js
+|   |   |-- CodeHintManager.js
+|   |   |-- CSSInlineEditor.js
+|   |   |-- Editor.js
+|   |   |-- EditorCommandHandlers.js
+|   |   |-- EditorManager.js
+|   |   |-- EditorOptionHandlers.js
+|   |   |-- EditorStatusBar.js
+|   |   |-- ImageViewer.js
+|   |   |-- InlineTextEditor.js
+|   |   |-- InlineWidget.js
+|   |   '-- MultiRangeInlineEditor.js
+|   |-- extensibility
+|   |   |-- ExtensionManager.js
+|   |   |-- ExtensionManagerDialog.js
+|   |   |-- ExtensionManagerView.js
+|   |   |-- ExtensionManagerViewModel.js
+|   |   |-- InstallExtensionDialog.js
+|   |   |-- Package.js
+|   |   |-- registry_utils.js
+|   |   '-- node
+|   |       |-- ExtensionManagerDomain.js
+|   |       |-- package-validator.js
+|   |       |-- package.json
+|   |       |-- README.md
+|   |       |-- node_modules
+|   |       |   |-- .bin
+|   |       |   |   |-- decompress-zip
+|   |       |   |   '-- semver
+|   |       |   |-- async
+|   |       |   |   |-- LICENSE
+|   |       |   |   |-- package.json
+|   |       |   |   |-- README.md
+|   |       |   |   '-- lib
+|   |       |   |       '-- async.js
+|   |       |   |-- decompress-zip
+|   |       |   |   |-- .editorconfig
+|   |       |   |   |-- .jshintrc
+|   |       |   |   |-- .npmignore
+|   |       |   |   |-- .travis.yml
+|   |       |   |   |-- download-test-assets.js
+|   |       |   |   |-- Gruntfile.js
+|   |       |   |   |-- package.json
+|   |       |   |   |-- README.md
+|   |       |   |   |-- bin
+|   |       |   |   |   '-- decompress-zip
+|   |       |   |   |-- lib
+|   |       |   |   |   |-- decompress-zip.js
+|   |       |   |   |   |-- extractors.js
+|   |       |   |   |   |-- file-details.js
+|   |       |   |   |   |-- signatures.js
+|   |       |   |   |   '-- structures.js
+|   |       |   |   |-- node_modules
+|   |       |   |   |   |-- .bin
+|   |       |   |   |   |   '-- nopt
+|   |       |   |   |   |-- binary
+|   |       |   |   |   |   |-- .npmignore
+|   |       |   |   |   |   |-- .travis.yml
+|   |       |   |   |   |   |-- index.js
+|   |       |   |   |   |   |-- package.json
+|   |       |   |   |   |   |-- README.markdown
+|   |       |   |   |   |   |-- example
+|   |       |   |   |   |   |   |-- buf.js
+|   |       |   |   |   |   |   |-- parse.js
+|   |       |   |   |   |   |   '-- stream.js
+|   |       |   |   |   |   |-- lib
+|   |       |   |   |   |   |   '-- vars.js
+|   |       |   |   |   |   |-- node_modules
+|   |       |   |   |   |   |   |-- buffers
+|   |       |   |   |   |   |   |   |-- index.js
+|   |       |   |   |   |   |   |   |-- package.json
+|   |       |   |   |   |   |   |   |-- README.markdown
+|   |       |   |   |   |   |   |   |-- examples
+|   |       |   |   |   |   |   |   |   |-- slice.js
+|   |       |   |   |   |   |   |   |   '-- splice.js
+|   |       |   |   |   |   |   |   '-- test
+|   |       |   |   |   |   |   |       '-- buffers.js
+|   |       |   |   |   |   |   '-- chainsaw
+|   |       |   |   |   |   |       |-- .npmignore
+|   |       |   |   |   |   |       |-- index.js
+|   |       |   |   |   |   |       |-- package.json
+|   |       |   |   |   |   |       |-- README.markdown
+|   |       |   |   |   |   |       |-- examples
+|   |       |   |   |   |   |       |   |-- add_do.js
+|   |       |   |   |   |   |       |   '-- prompt.js
+|   |       |   |   |   |   |       |-- node_modules
+|   |       |   |   |   |   |       |   '-- traverse
+|   |       |   |   |   |   |       |       |-- .npmignore
+|   |       |   |   |   |   |       |       |-- index.js
+|   |       |   |   |   |   |       |       |-- LICENSE
+|   |       |   |   |   |   |       |       |-- package.json
+|   |       |   |   |   |   |       |       |-- README.markdown
+|   |       |   |   |   |   |       |       |-- examples
+|   |       |   |   |   |   |       |       |   |-- json.js
+|   |       |   |   |   |   |       |       |   |-- leaves.js
+|   |       |   |   |   |   |       |       |   |-- negative.js
+|   |       |   |   |   |   |       |       |   '-- stringify.js
+|   |       |   |   |   |   |       |       '-- test
+|   |       |   |   |   |   |       |           |-- circular.js
+|   |       |   |   |   |   |       |           |-- date.js
+|   |       |   |   |   |   |       |           |-- equal.js
+|   |       |   |   |   |   |       |           |-- instance.js
+|   |       |   |   |   |   |       |           |-- interface.js
+|   |       |   |   |   |   |       |           |-- json.js
+|   |       |   |   |   |   |       |           |-- leaves.js
+|   |       |   |   |   |   |       |           |-- mutability.js
+|   |       |   |   |   |   |       |           |-- negative.js
+|   |       |   |   |   |   |       |           |-- obj.js
+|   |       |   |   |   |   |       |           |-- stop.js
+|   |       |   |   |   |   |       |           |-- stringify.js
+|   |       |   |   |   |   |       |           '-- super_deep.js
+|   |       |   |   |   |   |       '-- test
+|   |       |   |   |   |   |           '-- chainsaw.js
+|   |       |   |   |   |   |-- perf
+|   |       |   |   |   |   |   |-- loop.js
+|   |       |   |   |   |   |   '-- small.js
+|   |       |   |   |   |   '-- test
+|   |       |   |   |   |       |-- bu.js
+|   |       |   |   |   |       |-- deferred.js
+|   |       |   |   |   |       |-- dots.js
+|   |       |   |   |   |       |-- eof.js
+|   |       |   |   |   |       |-- flush.js
+|   |       |   |   |   |       |-- from_buffer.js
+|   |       |   |   |   |       |-- get_buffer.js
+|   |       |   |   |   |       |-- immediate.js
+|   |       |   |   |   |       |-- interval.js
+|   |       |   |   |   |       |-- into_buffer.js
+|   |       |   |   |   |       |-- into_stream.js
+|   |       |   |   |   |       |-- loop.js
+|   |       |   |   |   |       |-- loop_scan.js
+|   |       |   |   |   |       |-- lu.js
+|   |       |   |   |   |       |-- negbs.js
+|   |       |   |   |   |       |-- negls.js
+|   |       |   |   |   |       |-- nested.js
+|   |       |   |   |   |       |-- not_enough_buf.js
+|   |       |   |   |   |       |-- not_enough_parse.js
+|   |       |   |   |   |       |-- parse.js
+|   |       |   |   |   |       |-- peek.js
+|   |       |   |   |   |       |-- pipe.js
+|   |       |   |   |   |       |-- posbs.js
+|   |       |   |   |   |       |-- posls.js
+|   |       |   |   |   |       |-- scan.js
+|   |       |   |   |   |       |-- scan_buf.js
+|   |       |   |   |   |       |-- scan_buf_null.js
+|   |       |   |   |   |       |-- skip.js
+|   |       |   |   |   |       '-- split.js
+|   |       |   |   |   |-- mkpath
+|   |       |   |   |   |   |-- .npmignore
+|   |       |   |   |   |   |-- LICENSE
+|   |       |   |   |   |   |-- mkpath.js
+|   |       |   |   |   |   |-- package.json
+|   |       |   |   |   |   |-- README.md
+|   |       |   |   |   |   '-- test
+|   |       |   |   |   |       |-- chmod.js
+|   |       |   |   |   |       |-- clobber.js
+|   |       |   |   |   |       |-- mkpath.js
+|   |       |   |   |   |       |-- perm.js
+|   |       |   |   |   |       |-- perm_sync.js
+|   |       |   |   |   |       |-- rel.js
+|   |       |   |   |   |       |-- root.js
+|   |       |   |   |   |       |-- sync.js
+|   |       |   |   |   |       |-- umask.js
+|   |       |   |   |   |       '-- umask_sync.js
+|   |       |   |   |   |-- nopt
+|   |       |   |   |   |   |-- .npmignore
+|   |       |   |   |   |   |-- LICENSE
+|   |       |   |   |   |   |-- package.json
+|   |       |   |   |   |   |-- README.md
+|   |       |   |   |   |   |-- bin
+|   |       |   |   |   |   |   '-- nopt.js
+|   |       |   |   |   |   |-- examples
+|   |       |   |   |   |   |   '-- my-program.js
+|   |       |   |   |   |   |-- lib
+|   |       |   |   |   |   |   '-- nopt.js
+|   |       |   |   |   |   '-- node_modules
+|   |       |   |   |   |       '-- abbrev
+|   |       |   |   |   |           |-- LICENSE
+|   |       |   |   |   |           |-- package.json
+|   |       |   |   |   |           |-- README.md
+|   |       |   |   |   |           '-- lib
+|   |       |   |   |   |               '-- abbrev.js
+|   |       |   |   |   |-- q
+|   |       |   |   |   |   |-- CONTRIBUTING.md
+|   |       |   |   |   |   |-- LICENSE
+|   |       |   |   |   |   |-- package.json
+|   |       |   |   |   |   |-- q.js
+|   |       |   |   |   |   |-- queue.js
+|   |       |   |   |   |   |-- README.md
+|   |       |   |   |   |   '-- benchmark
+|   |       |   |   |   |       |-- compare-with-callbacks.js
+|   |       |   |   |   |       '-- scenarios.js
+|   |       |   |   |   |-- readable-stream
+|   |       |   |   |   |   |-- duplex.js
+|   |       |   |   |   |   |-- float.patch
+|   |       |   |   |   |   |-- fs.js
+|   |       |   |   |   |   |-- LICENSE
+|   |       |   |   |   |   |-- package.json
+|   |       |   |   |   |   |-- passthrough.js
+|   |       |   |   |   |   |-- readable.js
+|   |       |   |   |   |   |-- README.md
+|   |       |   |   |   |   |-- transform.js
+|   |       |   |   |   |   |-- writable.js
+|   |       |   |   |   |   |-- zlib.js
+|   |       |   |   |   |   |-- examples
+|   |       |   |   |   |   |   |-- CAPSLOCKTYPER.JS
+|   |       |   |   |   |   |   |-- typer-fsr.js
+|   |       |   |   |   |   |   '-- typer.js
+|   |       |   |   |   |   |-- lib
+|   |       |   |   |   |   |   |-- _stream_duplex.js
+|   |       |   |   |   |   |   |-- _stream_passthrough.js
+|   |       |   |   |   |   |   |-- _stream_readable.js
+|   |       |   |   |   |   |   |-- _stream_transform.js
+|   |       |   |   |   |   |   '-- _stream_writable.js
+|   |       |   |   |   |   |-- node_modules
+|   |       |   |   |   |   |   |-- core-util-is
+|   |       |   |   |   |   |   |   |-- float.patch
+|   |       |   |   |   |   |   |   |-- package.json
+|   |       |   |   |   |   |   |   |-- README.md
+|   |       |   |   |   |   |   |   |-- util.js
+|   |       |   |   |   |   |   |   '-- lib
+|   |       |   |   |   |   |   |       '-- util.js
+|   |       |   |   |   |   |   '-- debuglog
+|   |       |   |   |   |   |       |-- debuglog.js
+|   |       |   |   |   |   |       |-- LICENSE
+|   |       |   |   |   |   |       |-- package.json
+|   |       |   |   |   |   |       '-- README.md
+|   |       |   |   |   |   '-- test
+|   |       |   |   |   |       |-- common.js
+|   |       |   |   |   |       |-- fixtures
+|   |       |   |   |   |       |   '-- x1024.txt
+|   |       |   |   |   |       '-- simple
+|   |       |   |   |   |           |-- test-GH-64.js
+|   |       |   |   |   |           |-- test-GH-66.js
+|   |       |   |   |   |           |-- test-stream-big-push.js
+|   |       |   |   |   |           |-- test-stream-end-paused.js
+|   |       |   |   |   |           |-- test-stream-pipe-after-end.js
+|   |       |   |   |   |           |-- test-stream-pipe-error-handling.js
+|   |       |   |   |   |           |-- test-stream-pipe-event.js
+|   |       |   |   |   |           |-- test-stream-push-order.js
+|   |       |   |   |   |           |-- test-stream-push-strings.js
+|   |       |   |   |   |           |-- test-stream-readable-event.js
+|   |       |   |   |   |           |-- test-stream-readable-flow-recursion.js
+|   |       |   |   |   |           |-- test-stream-unshift-empty-chunk.js
+|   |       |   |   |   |           |-- test-stream-unshift-read-race.js
+|   |       |   |   |   |           |-- test-stream-writev.js
+|   |       |   |   |   |           |-- test-stream2-basic.js
+|   |       |   |   |   |           |-- test-stream2-compatibility.js
+|   |       |   |   |   |           |-- test-stream2-finish-pipe.js
+|   |       |   |   |   |           |-- test-stream2-large-read-stall.js
+|   |       |   |   |   |           |-- test-stream2-objects.js
+|   |       |   |   |   |           |-- test-stream2-pipe-error-handling.js
+|   |       |   |   |   |           |-- test-stream2-pipe-error-once-listener.js
+|   |       |   |   |   |           |-- test-stream2-push.js
+|   |       |   |   |   |           |-- test-stream2-read-sync-stack.js
+|   |       |   |   |   |           |-- test-stream2-readable-empty-buffer-no-eof.js
+|   |       |   |   |   |           |-- test-stream2-readable-from-list.js
+|   |       |   |   |   |           |-- test-stream2-readable-legacy-drain.js
+|   |       |   |   |   |           |-- test-stream2-readable-non-empty-end.js
+|   |       |   |   |   |           |-- test-stream2-readable-wrap-empty.js
+|   |       |   |   |   |           |-- test-stream2-readable-wrap.js
+|   |       |   |   |   |           |-- test-stream2-set-encoding.js
+|   |       |   |   |   |           |-- test-stream2-transform.js
+|   |       |   |   |   |           |-- test-stream2-unpipe-drain.js
+|   |       |   |   |   |           |-- test-stream2-unpipe-leak.js
+|   |       |   |   |   |           |-- test-stream2-writable.js
+|   |       |   |   |   |           '-- test-stream3-pause-then-read.js
+|   |       |   |   |   '-- touch
+|   |       |   |   |       |-- LICENSE
+|   |       |   |   |       |-- package.json
+|   |       |   |   |       |-- README.md
+|   |       |   |   |       |-- touch.js
+|   |       |   |   |       |-- bin
+|   |       |   |   |       |   '-- touch.js
+|   |       |   |   |       |-- node_modules
+|   |       |   |   |       |   |-- .bin
+|   |       |   |   |       |   |   '-- nopt
+|   |       |   |   |       |   '-- nopt
+|   |       |   |   |       |       |-- .npmignore
+|   |       |   |   |       |       |-- LICENSE
+|   |       |   |   |       |       |-- package.json
+|   |       |   |   |       |       |-- README.md
+|   |       |   |   |       |       |-- bin
+|   |       |   |   |       |       |   '-- nopt.js
+|   |       |   |   |       |       |-- examples
+|   |       |   |   |       |       |   '-- my-program.js
+|   |       |   |   |       |       |-- lib
+|   |       |   |   |       |       |   '-- nopt.js
+|   |       |   |   |       |       '-- node_modules
+|   |       |   |   |       |           '-- abbrev
+|   |       |   |   |       |               |-- LICENSE
+|   |       |   |   |       |               |-- package.json
+|   |       |   |   |       |               |-- README.md
+|   |       |   |   |       |               '-- lib
+|   |       |   |   |       |                   '-- abbrev.js
+|   |       |   |   |       '-- test
+|   |       |   |   |           '-- sanity.js
+|   |       |   |   '-- test
+|   |       |   |       '-- test.js
+|   |       |   |-- fs-extra
+|   |       |   |   |-- .npmignore
+|   |       |   |   |-- CHANGELOG.md
+|   |       |   |   |-- LICENSE
+|   |       |   |   |-- package.json
+|   |       |   |   |-- README.md
+|   |       |   |   |-- lib
+|   |       |   |   |   |-- copy.js
+|   |       |   |   |   |-- create.js
+|   |       |   |   |   |-- index.js
+|   |       |   |   |   |-- json.js
+|   |       |   |   |   |-- mkdir.js
+|   |       |   |   |   |-- output.js
+|   |       |   |   |   '-- remove.js
+|   |       |   |   '-- node_modules
+|   |       |   |       |-- .bin
+|   |       |   |       |   |-- ncp
+|   |       |   |       |   '-- rimraf
+|   |       |   |       |-- jsonfile
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- CHANGELOG.md
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   '-- lib
+|   |       |   |       |       '-- jsonfile.js
+|   |       |   |       |-- mkdirp
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- .travis.yml
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- readme.markdown
+|   |       |   |       |   |-- examples
+|   |       |   |       |   |   '-- pow.js
+|   |       |   |       |   '-- test
+|   |       |   |       |       |-- chmod.js
+|   |       |   |       |       |-- clobber.js
+|   |       |   |       |       |-- mkdirp.js
+|   |       |   |       |       |-- perm.js
+|   |       |   |       |       |-- perm_sync.js
+|   |       |   |       |       |-- race.js
+|   |       |   |       |       |-- rel.js
+|   |       |   |       |       |-- return.js
+|   |       |   |       |       |-- return_sync.js
+|   |       |   |       |       |-- root.js
+|   |       |   |       |       |-- sync.js
+|   |       |   |       |       |-- umask.js
+|   |       |   |       |       '-- umask_sync.js
+|   |       |   |       |-- ncp
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- .travis.yml
+|   |       |   |       |   |-- LICENSE.md
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   |-- bin
+|   |       |   |       |   |   '-- ncp
+|   |       |   |       |   |-- lib
+|   |       |   |       |   |   '-- ncp.js
+|   |       |   |       |   '-- test
+|   |       |   |       |       |-- ncp-test.js
+|   |       |   |       |       '-- fixtures
+|   |       |   |       |           '-- src
+|   |       |   |       |               |-- a
+|   |       |   |       |               |-- b
+|   |       |   |       |               |-- c
+|   |       |   |       |               |-- d
+|   |       |   |       |               |-- e
+|   |       |   |       |               |-- f
+|   |       |   |       |               '-- sub
+|   |       |   |       |                   |-- a
+|   |       |   |       |                   '-- b
+|   |       |   |       '-- rimraf
+|   |       |   |           |-- AUTHORS
+|   |       |   |           |-- bin.js
+|   |       |   |           |-- LICENSE
+|   |       |   |           |-- package.json
+|   |       |   |           |-- README.md
+|   |       |   |           |-- rimraf.js
+|   |       |   |           |-- node_modules
+|   |       |   |           |   '-- graceful-fs
+|   |       |   |           |       |-- .npmignore
+|   |       |   |           |       |-- graceful-fs.js
+|   |       |   |           |       |-- LICENSE
+|   |       |   |           |       |-- package.json
+|   |       |   |           |       |-- polyfills.js
+|   |       |   |           |       |-- README.md
+|   |       |   |           |       '-- test
+|   |       |   |           |           '-- open.js
+|   |       |   |           '-- test
+|   |       |   |               |-- run.sh
+|   |       |   |               |-- setup.sh
+|   |       |   |               |-- test-async.js
+|   |       |   |               '-- test-sync.js
+|   |       |   |-- request
+|   |       |   |   |-- .npmignore
+|   |       |   |   |-- index.js
+|   |       |   |   |-- LICENSE
+|   |       |   |   |-- package.json
+|   |       |   |   |-- README.md
+|   |       |   |   |-- request.js
+|   |       |   |   |-- lib
+|   |       |   |   |   |-- copy.js
+|   |       |   |   |   |-- debug.js
+|   |       |   |   |   '-- getSafe.js
+|   |       |   |   '-- node_modules
+|   |       |   |       |-- aws-sign
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   '-- README.md
+|   |       |   |       |-- cookie-jar
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- jar.js
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   '-- tests
+|   |       |   |       |       |-- run.js
+|   |       |   |       |       |-- test-cookie.js
+|   |       |   |       |       '-- test-cookiejar.js
+|   |       |   |       |-- forever-agent
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   '-- README.md
+|   |       |   |       |-- form-data
+|   |       |   |       |   |-- License
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- Readme.md
+|   |       |   |       |   |-- lib
+|   |       |   |       |   |   '-- form_data.js
+|   |       |   |       |   '-- node_modules
+|   |       |   |       |       |-- async
+|   |       |   |       |       |   |-- component.json
+|   |       |   |       |       |   |-- LICENSE
+|   |       |   |       |       |   |-- package.json
+|   |       |   |       |       |   |-- README.md
+|   |       |   |       |       |   '-- lib
+|   |       |   |       |       |       '-- async.js
+|   |       |   |       |       '-- combined-stream
+|   |       |   |       |           |-- .npmignore
+|   |       |   |       |           |-- License
+|   |       |   |       |           |-- Makefile
+|   |       |   |       |           |-- package.json
+|   |       |   |       |           |-- Readme.md
+|   |       |   |       |           |-- lib
+|   |       |   |       |           |   '-- combined_stream.js
+|   |       |   |       |           |-- node_modules
+|   |       |   |       |           |   '-- delayed-stream
+|   |       |   |       |           |       |-- .npmignore
+|   |       |   |       |           |       |-- License
+|   |       |   |       |           |       |-- Makefile
+|   |       |   |       |           |       |-- package.json
+|   |       |   |       |           |       |-- Readme.md
+|   |       |   |       |           |       |-- lib
+|   |       |   |       |           |       |   '-- delayed_stream.js
+|   |       |   |       |           |       '-- test
+|   |       |   |       |           |           |-- common.js
+|   |       |   |       |           |           |-- run.js
+|   |       |   |       |           |           '-- integration
+|   |       |   |       |           |               |-- test-delayed-http-upload.js
+|   |       |   |       |           |               |-- test-delayed-stream-auto-pause.js
+|   |       |   |       |           |               |-- test-delayed-stream-pause.js
+|   |       |   |       |           |               |-- test-delayed-stream.js
+|   |       |   |       |           |               |-- test-handle-source-errors.js
+|   |       |   |       |           |               |-- test-max-data-size.js
+|   |       |   |       |           |               |-- test-pipe-resumes.js
+|   |       |   |       |           |               '-- test-proxy-readable.js
+|   |       |   |       |           '-- test
+|   |       |   |       |               |-- common.js
+|   |       |   |       |               |-- run.js
+|   |       |   |       |               |-- fixture
+|   |       |   |       |               |   |-- file1.txt
+|   |       |   |       |               |   '-- file2.txt
+|   |       |   |       |               '-- integration
+|   |       |   |       |                   |-- test-callback-streams.js
+|   |       |   |       |                   |-- test-data-size.js
+|   |       |   |       |                   |-- test-delayed-streams-and-buffers-and-strings.js
+|   |       |   |       |                   |-- test-delayed-streams.js
+|   |       |   |       |                   |-- test-empty-string.js
+|   |       |   |       |                   |-- test-is-stream-like.js
+|   |       |   |       |                   |-- test-max-data-size.js
+|   |       |   |       |                   '-- test-unpaused-streams.js
+|   |       |   |       |-- hawk
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- .travis.yml
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- Makefile
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   |-- example
+|   |       |   |       |   |   '-- usage.js
+|   |       |   |       |   |-- images
+|   |       |   |       |   |   |-- hawk.png
+|   |       |   |       |   |   '-- logo.png
+|   |       |   |       |   |-- lib
+|   |       |   |       |   |   |-- browser.js
+|   |       |   |       |   |   |-- client.js
+|   |       |   |       |   |   |-- crypto.js
+|   |       |   |       |   |   |-- index.js
+|   |       |   |       |   |   |-- server.js
+|   |       |   |       |   |   '-- utils.js
+|   |       |   |       |   |-- node_modules
+|   |       |   |       |   |   |-- boom
+|   |       |   |       |   |   |   |-- .npmignore
+|   |       |   |       |   |   |   |-- .travis.yml
+|   |       |   |       |   |   |   |-- index.js
+|   |       |   |       |   |   |   |-- LICENSE
+|   |       |   |       |   |   |   |-- Makefile
+|   |       |   |       |   |   |   |-- package.json
+|   |       |   |       |   |   |   |-- README.md
+|   |       |   |       |   |   |   |-- images
+|   |       |   |       |   |   |   |   '-- boom.png
+|   |       |   |       |   |   |   |-- lib
+|   |       |   |       |   |   |   |   '-- index.js
+|   |       |   |       |   |   |   '-- test
+|   |       |   |       |   |   |       '-- index.js
+|   |       |   |       |   |   |-- cryptiles
+|   |       |   |       |   |   |   |-- .npmignore
+|   |       |   |       |   |   |   |-- .travis.yml
+|   |       |   |       |   |   |   |-- index.js
+|   |       |   |       |   |   |   |-- LICENSE
+|   |       |   |       |   |   |   |-- Makefile
+|   |       |   |       |   |   |   |-- package.json
+|   |       |   |       |   |   |   |-- README.md
+|   |       |   |       |   |   |   |-- lib
+|   |       |   |       |   |   |   |   '-- index.js
+|   |       |   |       |   |   |   '-- test
+|   |       |   |       |   |   |       '-- index.js
+|   |       |   |       |   |   |-- hoek
+|   |       |   |       |   |   |   |-- .npmignore
+|   |       |   |       |   |   |   |-- .travis.yml
+|   |       |   |       |   |   |   |-- index.js
+|   |       |   |       |   |   |   |-- LICENSE
+|   |       |   |       |   |   |   |-- Makefile
+|   |       |   |       |   |   |   |-- package.json
+|   |       |   |       |   |   |   |-- README.md
+|   |       |   |       |   |   |   |-- images
+|   |       |   |       |   |   |   |   '-- hoek.png
+|   |       |   |       |   |   |   |-- lib
+|   |       |   |       |   |   |   |   |-- escape.js
+|   |       |   |       |   |   |   |   '-- index.js
+|   |       |   |       |   |   |   '-- test
+|   |       |   |       |   |   |       |-- escaper.js
+|   |       |   |       |   |   |       |-- index.js
+|   |       |   |       |   |   |       '-- modules
+|   |       |   |       |   |   |           |-- test1.js
+|   |       |   |       |   |   |           |-- test2.js
+|   |       |   |       |   |   |           '-- test3.js
+|   |       |   |       |   |   '-- sntp
+|   |       |   |       |   |       |-- .npmignore
+|   |       |   |       |   |       |-- .travis.yml
+|   |       |   |       |   |       |-- index.js
+|   |       |   |       |   |       |-- LICENSE
+|   |       |   |       |   |       |-- Makefile
+|   |       |   |       |   |       |-- package.json
+|   |       |   |       |   |       |-- README.md
+|   |       |   |       |   |       |-- examples
+|   |       |   |       |   |       |   |-- offset.js
+|   |       |   |       |   |       |   '-- time.js
+|   |       |   |       |   |       |-- lib
+|   |       |   |       |   |       |   '-- index.js
+|   |       |   |       |   |       '-- test
+|   |       |   |       |   |           '-- index.js
+|   |       |   |       |   '-- test
+|   |       |   |       |       |-- browser.js
+|   |       |   |       |       |-- client.js
+|   |       |   |       |       |-- crypto.js
+|   |       |   |       |       |-- index.js
+|   |       |   |       |       |-- message.js
+|   |       |   |       |       |-- readme.js
+|   |       |   |       |       |-- server.js
+|   |       |   |       |       |-- uri.js
+|   |       |   |       |       '-- utils.js
+|   |       |   |       |-- http-signature
+|   |       |   |       |   |-- .dir-locals.el
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- http_signing.md
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   |-- lib
+|   |       |   |       |   |   |-- index.js
+|   |       |   |       |   |   |-- parser.js
+|   |       |   |       |   |   |-- signer.js
+|   |       |   |       |   |   |-- util.js
+|   |       |   |       |   |   '-- verify.js
+|   |       |   |       |   '-- node_modules
+|   |       |   |       |       |-- asn1
+|   |       |   |       |       |   |-- .npmignore
+|   |       |   |       |       |   |-- LICENSE
+|   |       |   |       |       |   |-- package.json
+|   |       |   |       |       |   |-- README.md
+|   |       |   |       |       |   |-- lib
+|   |       |   |       |       |   |   |-- index.js
+|   |       |   |       |       |   |   '-- ber
+|   |       |   |       |       |   |       |-- errors.js
+|   |       |   |       |       |   |       |-- index.js
+|   |       |   |       |       |   |       |-- reader.js
+|   |       |   |       |       |   |       |-- types.js
+|   |       |   |       |       |   |       '-- writer.js
+|   |       |   |       |       |   '-- tst
+|   |       |   |       |       |       '-- ber
+|   |       |   |       |       |           |-- reader.test.js
+|   |       |   |       |       |           '-- writer.test.js
+|   |       |   |       |       |-- assert-plus
+|   |       |   |       |       |   |-- assert.js
+|   |       |   |       |       |   |-- package.json
+|   |       |   |       |       |   '-- README.md
+|   |       |   |       |       '-- ctype
+|   |       |   |       |           |-- CHANGELOG
+|   |       |   |       |           |-- ctf.js
+|   |       |   |       |           |-- ctio.js
+|   |       |   |       |           |-- ctype.js
+|   |       |   |       |           |-- LICENSE
+|   |       |   |       |           |-- package.json
+|   |       |   |       |           |-- README
+|   |       |   |       |           |-- README.old
+|   |       |   |       |           |-- man
+|   |       |   |       |           |   '-- man3ctype
+|   |       |   |       |           |       '-- ctio.3ctype
+|   |       |   |       |           |-- tools
+|   |       |   |       |           |   |-- jsl.conf
+|   |       |   |       |           |   '-- jsstyle
+|   |       |   |       |           '-- tst
+|   |       |   |       |               |-- ctf
+|   |       |   |       |               |   |-- float.json
+|   |       |   |       |               |   |-- int.json
+|   |       |   |       |               |   |-- psinfo.json
+|   |       |   |       |               |   |-- struct.json
+|   |       |   |       |               |   |-- tst.fail.js
+|   |       |   |       |               |   |-- tst.float.js
+|   |       |   |       |               |   |-- tst.int.js
+|   |       |   |       |               |   |-- tst.psinfo.js
+|   |       |   |       |               |   |-- tst.struct.js
+|   |       |   |       |               |   |-- tst.typedef.js
+|   |       |   |       |               |   '-- typedef.json
+|   |       |   |       |               |-- ctio
+|   |       |   |       |               |   |-- float
+|   |       |   |       |               |   |   |-- tst.rfloat.js
+|   |       |   |       |               |   |   '-- tst.wfloat.js
+|   |       |   |       |               |   |-- int
+|   |       |   |       |               |   |   |-- tst.64.js
+|   |       |   |       |               |   |   |-- tst.rint.js
+|   |       |   |       |               |   |   |-- tst.wbounds.js
+|   |       |   |       |               |   |   '-- tst.wint.js
+|   |       |   |       |               |   '-- uint
+|   |       |   |       |               |       |-- tst.64.js
+|   |       |   |       |               |       |-- tst.roundtrip.js
+|   |       |   |       |               |       |-- tst.ruint.js
+|   |       |   |       |               |       '-- tst.wuint.js
+|   |       |   |       |               '-- ctype
+|   |       |   |       |                   |-- tst.basicr.js
+|   |       |   |       |                   |-- tst.basicw.js
+|   |       |   |       |                   |-- tst.char.js
+|   |       |   |       |                   |-- tst.endian.js
+|   |       |   |       |                   |-- tst.oldwrite.js
+|   |       |   |       |                   |-- tst.readSize.js
+|   |       |   |       |                   |-- tst.structw.js
+|   |       |   |       |                   '-- tst.writeStruct.js
+|   |       |   |       |-- json-stringify-safe
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   |-- stringify.js
+|   |       |   |       |   '-- test.js
+|   |       |   |       |-- mime
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- mime.js
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   |-- test.js
+|   |       |   |       |   '-- types
+|   |       |   |       |       |-- mime.types
+|   |       |   |       |       '-- node.types
+|   |       |   |       |-- node-uuid
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- component.json
+|   |       |   |       |   |-- LICENSE.md
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   |-- uuid.js
+|   |       |   |       |   |-- benchmark
+|   |       |   |       |   |   |-- bench.gnu
+|   |       |   |       |   |   |-- bench.sh
+|   |       |   |       |   |   |-- benchmark-native.c
+|   |       |   |       |   |   |-- benchmark.js
+|   |       |   |       |   |   '-- README.md
+|   |       |   |       |   '-- test
+|   |       |   |       |       |-- compare_v1.js
+|   |       |   |       |       |-- test.html
+|   |       |   |       |       '-- test.js
+|   |       |   |       |-- oauth-sign
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- LICENSE
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   |-- README.md
+|   |       |   |       |   '-- test.js
+|   |       |   |       |-- qs
+|   |       |   |       |   |-- .gitmodules
+|   |       |   |       |   |-- .npmignore
+|   |       |   |       |   |-- index.js
+|   |       |   |       |   |-- package.json
+|   |       |   |       |   '-- Readme.md
+|   |       |   |       '-- tunnel-agent
+|   |       |   |           |-- index.js
+|   |       |   |           |-- LICENSE
+|   |       |   |           |-- package.json
+|   |       |   |           '-- README.md
+|   |       |   |-- rewire
+|   |       |   |   |-- .npmignore
+|   |       |   |   |-- .travis.yml
+|   |       |   |   |-- CHANGELOG.md
+|   |       |   |   |-- LICENSE
+|   |       |   |   |-- package.json
+|   |       |   |   |-- README.md
+|   |       |   |   |-- lib
+|   |       |   |   |   |-- __get__.js
+|   |       |   |   |   |-- __set__.js
+|   |       |   |   |   |-- detectStrictMode.js
+|   |       |   |   |   |-- getImportGlobalsSrc.js
+|   |       |   |   |   |-- index.js
+|   |       |   |   |   |-- moduleEnv.js
+|   |       |   |   |   |-- rewire.js
+|   |       |   |   |   '-- bundlers
+|   |       |   |   |       |-- getRewireRegExp.js
+|   |       |   |   |       |-- getRewireRequires.js
+|   |       |   |   |       |-- injectRewire.js
+|   |       |   |   |       |-- browserify
+|   |       |   |   |       |   |-- browserifyMiddleware.js
+|   |       |   |   |       |   '-- browserifyRewire.js
+|   |       |   |   |       '-- webpack
+|   |       |   |   |           |-- configureWebpack.js
+|   |       |   |   |           |-- getLoaderTestRegExp.js
+|   |       |   |   |           |-- webpackPostLoader.js
+|   |       |   |   |           |-- webpackPostProcessor.js
+|   |       |   |   |           '-- webpackRewire.js
+|   |       |   |   '-- test
+|   |       |   |       |-- __get__.test.js
+|   |       |   |       |-- __set__.test.js
+|   |       |   |       |-- debug.test.js
+|   |       |   |       |-- detectStrictMode.test.js
+|   |       |   |       |-- getImportGlobalsSrc.test.js
+|   |       |   |       |-- rewire.test.js
+|   |       |   |       '-- testModules
+|   |       |   |           |-- debuggerModule.js
+|   |       |   |           |-- emptyModule.js
+|   |       |   |           |-- module.coffee
+|   |       |   |           |-- moduleA.js
+|   |       |   |           |-- moduleB.js
+|   |       |   |           |-- sharedTestCases.js
+|   |       |   |           |-- someOtherModule.js
+|   |       |   |           |-- strictModule.js
+|   |       |   |           |-- throwError.js
+|   |       |   |           '-- fake_node_modules
+|   |       |   |               '-- rewire
+|   |       |   |                   '-- package.json
+|   |       |   |-- semver
+|   |       |   |   |-- .npmignore
+|   |       |   |   |-- foot.js
+|   |       |   |   |-- head.js
+|   |       |   |   |-- LICENSE
+|   |       |   |   |-- Makefile
+|   |       |   |   |-- package.json
+|   |       |   |   |-- README.md
+|   |       |   |   |-- semver.browser.js
+|   |       |   |   |-- semver.browser.js.gz
+|   |       |   |   |-- semver.js
+|   |       |   |   |-- semver.min.js
+|   |       |   |   |-- semver.min.js.gz
+|   |       |   |   |-- bin
+|   |       |   |   |   '-- semver
+|   |       |   |   '-- test
+|   |       |   |       |-- amd.js
+|   |       |   |       |-- index.js
+|   |       |   |       '-- no-module.js
+|   |       |   '-- temp
+|   |       |       |-- .npmignore
+|   |       |       |-- .travis.yml
+|   |       |       |-- LICENSE
+|   |       |       |-- package.json
+|   |       |       |-- README.md
+|   |       |       |-- examples
+|   |       |       |   |-- grepcount.js
+|   |       |       |   '-- pdfcreator.js
+|   |       |       |-- lib
+|   |       |       |   '-- temp.js
+|   |       |       |-- node_modules
+|   |       |       |   |-- osenv
+|   |       |       |   |   |-- LICENSE
+|   |       |       |   |   |-- osenv.js
+|   |       |       |   |   |-- package.json
+|   |       |       |   |   |-- README.md
+|   |       |       |   |   '-- test
+|   |       |       |   |       |-- unix.js
+|   |       |       |   |       '-- windows.js
+|   |       |       |   '-- rimraf
+|   |       |       |       |-- AUTHORS
+|   |       |       |       |-- LICENSE
+|   |       |       |       |-- package.json
+|   |       |       |       |-- README.md
+|   |       |       |       |-- rimraf.js
+|   |       |       |       |-- node_modules
+|   |       |       |       |   '-- graceful-fs
+|   |       |       |       |       |-- .npmignore
+|   |       |       |       |       |-- graceful-fs.js
+|   |       |       |       |       |-- LICENSE
+|   |       |       |       |       |-- package.json
+|   |       |       |       |       |-- README.md
+|   |       |       |       |       '-- test
+|   |       |       |       |           |-- open.js
+|   |       |       |       |           '-- ulimit.js
+|   |       |       |       '-- test
+|   |       |       |           |-- run.sh
+|   |       |       |           |-- setup.sh
+|   |       |       |           |-- test-async.js
+|   |       |       |           '-- test-sync.js
+|   |       |       '-- test
+|   |       |           '-- temp-test.js
+|   |       '-- spec
+|   |           |-- Installation.spec.js
+|   |           '-- Validation.spec.js
+|   |-- extensions
+|   |   |-- default
+|   |   |   |-- README.txt
+|   |   |   |-- CloseOthers
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   '-- unittest-files
+|   |   |   |       '-- dummy.js
+|   |   |   |-- CSSCodeHints
+|   |   |   |   |-- CSSProperties.json
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   |-- styles
+|   |   |   |   |   '-- brackets-css-hints.css
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- region-template.html
+|   |   |   |       '-- regions.css
+|   |   |   |-- DarkTheme
+|   |   |   |   |-- main.less
+|   |   |   |   '-- package.json
+|   |   |   |-- DebugCommands
+|   |   |   |   |-- ErrorNotification.js
+|   |   |   |   |-- keyboard.json
+|   |   |   |   |-- main.js
+|   |   |   |   |-- NodeDebugUtils.js
+|   |   |   |   |-- styles.css
+|   |   |   |   '-- htmlContent
+|   |   |   |       |-- language-dialog.html
+|   |   |   |       '-- perf-dialog.html
+|   |   |   |-- HTMLCodeHints
+|   |   |   |   |-- HtmlAttributes.json
+|   |   |   |   |-- HtmlTags.json
+|   |   |   |   |-- main.js
+|   |   |   |   '-- unittests.js
+|   |   |   |-- HtmlEntityCodeHints
+|   |   |   |   |-- main.js
+|   |   |   |   |-- SpecialChars.json
+|   |   |   |   |-- styles.css
+|   |   |   |   |-- unittests.js
+|   |   |   |   '-- unittest-files
+|   |   |   |       '-- default.html
+|   |   |   |-- InlineColorEditor
+|   |   |   |   |-- ColorEditor.js
+|   |   |   |   |-- ColorEditorTemplate.html
+|   |   |   |   |-- InlineColorEditor.js
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   |-- css
+|   |   |   |   |   '-- main.less
+|   |   |   |   |-- img
+|   |   |   |   |   |-- color_thumb_back.png
+|   |   |   |   |   |-- color_thumb_back@2x.png
+|   |   |   |   |   |-- color_thumb_back_dark.png
+|   |   |   |   |   |-- color_thumb_back_dark@2x.png
+|   |   |   |   |   |-- grabber_color-slider.png
+|   |   |   |   |   |-- grabber_color-slider@2x.png
+|   |   |   |   |   |-- grabber_color-well.png
+|   |   |   |   |   |-- grabber_color-well@2x.png
+|   |   |   |   |   |-- grabber_gradient.png
+|   |   |   |   |   '-- grabber_gradient@2x.png
+|   |   |   |   |-- thirdparty
+|   |   |   |   |   '-- tinycolor-min.js
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- unittests.css
+|   |   |   |       '-- unittests.html
+|   |   |   |-- InlineTimingFunctionEditor
+|   |   |   |   |-- BezierCurveEditor.js
+|   |   |   |   |-- BezierCurveEditorTemplate.html
+|   |   |   |   |-- grid-dark.png
+|   |   |   |   |-- grid.png
+|   |   |   |   |-- InlineTimingFunctionEditor.js
+|   |   |   |   |-- Localized.css
+|   |   |   |   |-- main.js
+|   |   |   |   |-- main.less
+|   |   |   |   |-- StepEditor.js
+|   |   |   |   |-- StepEditorTemplate.html
+|   |   |   |   |-- TimingFunctionUtils.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   '-- unittest-files
+|   |   |   |       '-- unittests.css
+|   |   |   |-- JavaScriptCodeHints
+|   |   |   |   |-- HintUtils.js
+|   |   |   |   |-- HintUtils2.js
+|   |   |   |   |-- keyboard.json
+|   |   |   |   |-- main.js
+|   |   |   |   |-- MessageIds.js
+|   |   |   |   |-- ParameterHintManager.js
+|   |   |   |   |-- ParameterHintTemplate.html
+|   |   |   |   |-- Preferences.js
+|   |   |   |   |-- ScopeManager.js
+|   |   |   |   |-- Session.js
+|   |   |   |   |-- tern-worker.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   |-- styles
+|   |   |   |   |   '-- brackets-js-hints.css
+|   |   |   |   |-- thirdparty
+|   |   |   |   |   |-- acorn
+|   |   |   |   |   |-- requirejs
+|   |   |   |   |   |   |-- LICENSE
+|   |   |   |   |   |   '-- require.js
+|   |   |   |   |   '-- tern
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- basic-test-files
+|   |   |   |       |   |-- file1.js
+|   |   |   |       |   |-- file2.js
+|   |   |   |       |   |-- file3.js
+|   |   |   |       |   |-- index.html
+|   |   |   |       |   |-- MyModule.js
+|   |   |   |       |   '-- test.html
+|   |   |   |       |-- module-test-files
+|   |   |   |       |   |-- Car.js
+|   |   |   |       |   |-- credits.js
+|   |   |   |       |   |-- module_tests.js
+|   |   |   |       |   |-- products.js
+|   |   |   |       |   |-- purchase.js
+|   |   |   |       |   |-- shirt.js
+|   |   |   |       |   '-- china
+|   |   |   |       |       |-- Cup.js
+|   |   |   |       |       '-- cupFiller.js
+|   |   |   |       |-- non-module-test-files
+|   |   |   |       |   |-- .jscodehints
+|   |   |   |       |   |-- app.js
+|   |   |   |       |   |-- a
+|   |   |   |       |   |   '-- a.js
+|   |   |   |       |   |-- b
+|   |   |   |       |   |   |-- b.js
+|   |   |   |       |   |   '-- b1
+|   |   |   |       |   |       '-- b1.js
+|   |   |   |       |   |-- c
+|   |   |   |       |   |   '-- c.js
+|   |   |   |       |   |-- d
+|   |   |   |       |   |   |-- d.js
+|   |   |   |       |   |   |-- d2.js
+|   |   |   |       |   |   |-- d23.js
+|   |   |   |       |   |   '-- d3-excluded.js
+|   |   |   |       |   '-- excluded
+|   |   |   |       |       '-- e.js
+|   |   |   |       '-- preference-test-files
+|   |   |   |           |-- defaults-test
+|   |   |   |           |   '-- .jscodehints
+|   |   |   |           |-- negative-test
+|   |   |   |           |   '-- .jscodehints
+|   |   |   |           '-- positive-test
+|   |   |   |               '-- .jscodehints
+|   |   |   |-- JavaScriptQuickEdit
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- jquery-ui
+|   |   |   |       |   |-- .editorconfig
+|   |   |   |       |   |-- .jshintrc
+|   |   |   |       |   |-- AUTHORS.txt
+|   |   |   |       |   |-- GPL-LICENSE.txt
+|   |   |   |       |   |-- grunt.js
+|   |   |   |       |   |-- jquery-1.7.2.js
+|   |   |   |       |   |-- MIT-LICENSE.txt
+|   |   |   |       |   |-- package.json
+|   |   |   |       |   |-- README.md
+|   |   |   |       |   |-- build
+|   |   |   |       |   |   |-- themes
+|   |   |   |       |   |   |-- release
+|   |   |   |       |   |   |   |-- changelog-shell
+|   |   |   |       |   |   |   '-- prepare-release
+|   |   |   |       |   |   '-- tasks
+|   |   |   |       |   |       |-- build.js
+|   |   |   |       |   |       '-- testswarm.js
+|   |   |   |       |   |-- demos
+|   |   |   |       |   |   |-- demos.css
+|   |   |   |       |   |   |-- index.html
+|   |   |   |       |   |   |-- accordion
+|   |   |   |       |   |   |   |-- collapsible.html
+|   |   |   |       |   |   |   |-- custom-icons.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- fillspace.html
+|   |   |   |       |   |   |   |-- hoverintent.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- no-auto-height.html
+|   |   |   |       |   |   |   '-- sortable.html
+|   |   |   |       |   |   |-- addClass
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- animate
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- autocomplete
+|   |   |   |       |   |   |   |-- categories.html
+|   |   |   |       |   |   |   |-- combobox.html
+|   |   |   |       |   |   |   |-- custom-data.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- folding.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- london.xml
+|   |   |   |       |   |   |   |-- maxheight.html
+|   |   |   |       |   |   |   |-- multiple-remote.html
+|   |   |   |       |   |   |   |-- multiple.html
+|   |   |   |       |   |   |   |-- remote-jsonp.html
+|   |   |   |       |   |   |   |-- remote-with-cache.html
+|   |   |   |       |   |   |   |-- remote.html
+|   |   |   |       |   |   |   |-- search.php
+|   |   |   |       |   |   |   |-- xml.html
+|   |   |   |       |   |   |   '-- images
+|   |   |   |       |   |   |       |-- jquery_32x32.png
+|   |   |   |       |   |   |       |-- jqueryui_32x32.png
+|   |   |   |       |   |   |       |-- sizzlejs_32x32.png
+|   |   |   |       |   |   |       |-- transparent_1x1.png
+|   |   |   |       |   |   |       '-- ui-anim_basic_16x16.gif
+|   |   |   |       |   |   |-- button
+|   |   |   |       |   |   |   |-- checkbox.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- icons.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- radio.html
+|   |   |   |       |   |   |   |-- splitbutton.html
+|   |   |   |       |   |   |   '-- toolbar.html
+|   |   |   |       |   |   |-- datepicker
+|   |   |   |       |   |   |   |-- alt-field.html
+|   |   |   |       |   |   |   |-- animation.html
+|   |   |   |       |   |   |   |-- buttonbar.html
+|   |   |   |       |   |   |   |-- date-formats.html
+|   |   |   |       |   |   |   |-- date-range.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- dropdown-month-year.html
+|   |   |   |       |   |   |   |-- icon-trigger.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- inline.html
+|   |   |   |       |   |   |   |-- localization.html
+|   |   |   |       |   |   |   |-- min-max.html
+|   |   |   |       |   |   |   |-- multiple-calendars.html
+|   |   |   |       |   |   |   |-- other-months.html
+|   |   |   |       |   |   |   |-- show-week.html
+|   |   |   |       |   |   |   '-- images
+|   |   |   |       |   |   |       '-- calendar.gif
+|   |   |   |       |   |   |-- dialog
+|   |   |   |       |   |   |   |-- animated.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- modal-confirmation.html
+|   |   |   |       |   |   |   |-- modal-form.html
+|   |   |   |       |   |   |   |-- modal-message.html
+|   |   |   |       |   |   |   '-- modal.html
+|   |   |   |       |   |   |-- draggable
+|   |   |   |       |   |   |   |-- constrain-movement.html
+|   |   |   |       |   |   |   |-- cursor-style.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- delay-start.html
+|   |   |   |       |   |   |   |-- events.html
+|   |   |   |       |   |   |   |-- handle.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- revert.html
+|   |   |   |       |   |   |   |-- scroll.html
+|   |   |   |       |   |   |   |-- snap-to.html
+|   |   |   |       |   |   |   |-- sortable.html
+|   |   |   |       |   |   |   '-- visual-feedback.html
+|   |   |   |       |   |   |-- droppable
+|   |   |   |       |   |   |   |-- accepted-elements.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- photo-manager.html
+|   |   |   |       |   |   |   |-- propagation.html
+|   |   |   |       |   |   |   |-- revert.html
+|   |   |   |       |   |   |   |-- shopping-cart.html
+|   |   |   |       |   |   |   |-- visual-feedback.html
+|   |   |   |       |   |   |   '-- images
+|   |   |   |       |   |   |       |-- high_tatras.jpg
+|   |   |   |       |   |   |       |-- high_tatras2.jpg
+|   |   |   |       |   |   |       |-- high_tatras2_min.jpg
+|   |   |   |       |   |   |       |-- high_tatras3.jpg
+|   |   |   |       |   |   |       |-- high_tatras3_min.jpg
+|   |   |   |       |   |   |       |-- high_tatras4.jpg
+|   |   |   |       |   |   |       |-- high_tatras4_min.jpg
+|   |   |   |       |   |   |       '-- high_tatras_min.jpg
+|   |   |   |       |   |   |-- effect
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- easing.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- hide
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- images
+|   |   |   |       |   |   |   |-- calendar.gif
+|   |   |   |       |   |   |   |-- demo-config-on-tile.gif
+|   |   |   |       |   |   |   |-- demo-config-on.gif
+|   |   |   |       |   |   |   |-- demo-spindown-closed.gif
+|   |   |   |       |   |   |   |-- demo-spindown-open.gif
+|   |   |   |       |   |   |   |-- icon-docs-info.gif
+|   |   |   |       |   |   |   '-- pbar-ani.gif
+|   |   |   |       |   |   |-- menu
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- navigationmenu.html
+|   |   |   |       |   |   |   '-- topalignmenu.html
+|   |   |   |       |   |   |-- position
+|   |   |   |       |   |   |   |-- cycler.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   '-- images
+|   |   |   |       |   |   |       |-- earth.jpg
+|   |   |   |       |   |   |       |-- flight.jpg
+|   |   |   |       |   |   |       '-- rocket.jpg
+|   |   |   |       |   |   |-- progressbar
+|   |   |   |       |   |   |   |-- animated.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- resize.html
+|   |   |   |       |   |   |   '-- images
+|   |   |   |       |   |   |       '-- pbar-ani.gif
+|   |   |   |       |   |   |-- removeClass
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- resizable
+|   |   |   |       |   |   |   |-- animate.html
+|   |   |   |       |   |   |   |-- aspect-ratio.html
+|   |   |   |       |   |   |   |-- constrain-area.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- delay-start.html
+|   |   |   |       |   |   |   |-- helper.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- max-min.html
+|   |   |   |       |   |   |   |-- snap-to-grid.html
+|   |   |   |       |   |   |   |-- synchronous-resize.html
+|   |   |   |       |   |   |   |-- textarea.html
+|   |   |   |       |   |   |   '-- visual-feedback.html
+|   |   |   |       |   |   |-- selectable
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- display-grid.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   '-- serialize.html
+|   |   |   |       |   |   |-- show
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- slider
+|   |   |   |       |   |   |   |-- colorpicker.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- hotelrooms.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- multiple-vertical.html
+|   |   |   |       |   |   |   |-- range-vertical.html
+|   |   |   |       |   |   |   |-- range.html
+|   |   |   |       |   |   |   |-- rangemax.html
+|   |   |   |       |   |   |   |-- rangemin.html
+|   |   |   |       |   |   |   |-- side-scroll.html
+|   |   |   |       |   |   |   |-- slider-vertical.html
+|   |   |   |       |   |   |   |-- steps.html
+|   |   |   |       |   |   |   '-- tabs.html
+|   |   |   |       |   |   |-- sortable
+|   |   |   |       |   |   |   |-- connect-lists-through-tabs.html
+|   |   |   |       |   |   |   |-- connect-lists.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- delay-start.html
+|   |   |   |       |   |   |   |-- display-grid.html
+|   |   |   |       |   |   |   |-- empty-lists.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- items.html
+|   |   |   |       |   |   |   |-- placeholder.html
+|   |   |   |       |   |   |   '-- portlets.html
+|   |   |   |       |   |   |-- spinner
+|   |   |   |       |   |   |   |-- currency.html
+|   |   |   |       |   |   |   |-- decimal.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- latlong.html
+|   |   |   |       |   |   |   |-- overflow.html
+|   |   |   |       |   |   |   '-- time.html
+|   |   |   |       |   |   |-- switchClass
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- tabs
+|   |   |   |       |   |   |   |-- ajax.html
+|   |   |   |       |   |   |   |-- bottom.html
+|   |   |   |       |   |   |   |-- collapsible.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- manipulation.html
+|   |   |   |       |   |   |   |-- mouseover.html
+|   |   |   |       |   |   |   |-- sortable.html
+|   |   |   |       |   |   |   |-- vertical.html
+|   |   |   |       |   |   |   '-- ajax
+|   |   |   |       |   |   |       |-- content1.html
+|   |   |   |       |   |   |       |-- content2.html
+|   |   |   |       |   |   |       |-- content3-slow.php
+|   |   |   |       |   |   |       '-- content4-broken.php
+|   |   |   |       |   |   |-- toggle
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- toggleClass
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   '-- index.html
+|   |   |   |       |   |   |-- tooltip
+|   |   |   |       |   |   |   |-- custom-animation.html
+|   |   |   |       |   |   |   |-- custom-content.html
+|   |   |   |       |   |   |   |-- custom-style.html
+|   |   |   |       |   |   |   |-- default.html
+|   |   |   |       |   |   |   |-- forms.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- tracking.html
+|   |   |   |       |   |   |   |-- video-player.html
+|   |   |   |       |   |   |   |-- ajax
+|   |   |   |       |   |   |   |   |-- content1.html
+|   |   |   |       |   |   |   |   '-- content2.html
+|   |   |   |       |   |   |   '-- images
+|   |   |   |       |   |   |       |-- st-stephens.jpg
+|   |   |   |       |   |   |       '-- tower-bridge.jpg
+|   |   |   |       |   |   '-- widget
+|   |   |   |       |   |       |-- default.html
+|   |   |   |       |   |       '-- index.html
+|   |   |   |       |   |-- external
+|   |   |   |       |   |   |-- globalize.culture.de-DE.js
+|   |   |   |       |   |   |-- globalize.culture.ja-JP.js
+|   |   |   |       |   |   |-- globalize.js
+|   |   |   |       |   |   |-- jquery.bgiframe-2.1.2.js
+|   |   |   |       |   |   |-- jquery.cookie.js
+|   |   |   |       |   |   |-- jquery.metadata.js
+|   |   |   |       |   |   |-- jquery.mousewheel-3.0.4.js
+|   |   |   |       |   |   |-- jshint.js
+|   |   |   |       |   |   |-- qunit.css
+|   |   |   |       |   |   '-- qunit.js
+|   |   |   |       |   |-- tests
+|   |   |   |       |   |   |-- .jshintrc
+|   |   |   |       |   |   |-- index.css
+|   |   |   |       |   |   |-- index.html
+|   |   |   |       |   |   |-- index.js
+|   |   |   |       |   |   |-- jquery-1.6.1.js
+|   |   |   |       |   |   |-- jquery-1.6.2.js
+|   |   |   |       |   |   |-- jquery-1.6.3.js
+|   |   |   |       |   |   |-- jquery-1.6.4.js
+|   |   |   |       |   |   |-- jquery-1.6.js
+|   |   |   |       |   |   |-- jquery-1.7.1.js
+|   |   |   |       |   |   |-- jquery-1.7.2.js
+|   |   |   |       |   |   |-- jquery-1.7.js
+|   |   |   |       |   |   |-- jquery.js
+|   |   |   |       |   |   |-- jquery.simulate.js
+|   |   |   |       |   |   |-- unit
+|   |   |   |       |   |   |   |-- all-active.html
+|   |   |   |       |   |   |   |-- all.html
+|   |   |   |       |   |   |   |-- index.html
+|   |   |   |       |   |   |   |-- qunit-composite.css
+|   |   |   |       |   |   |   |-- qunit-composite.js
+|   |   |   |       |   |   |   |-- subsuite.js
+|   |   |   |       |   |   |   |-- swarminject.js
+|   |   |   |       |   |   |   |-- testsuite.js
+|   |   |   |       |   |   |   |-- accordion
+|   |   |   |       |   |   |   |   |-- accordion.html
+|   |   |   |       |   |   |   |   |-- accordion_common.js
+|   |   |   |       |   |   |   |   |-- accordion_common_deprecated.js
+|   |   |   |       |   |   |   |   |-- accordion_core.js
+|   |   |   |       |   |   |   |   |-- accordion_deprecated.html
+|   |   |   |       |   |   |   |   |-- accordion_deprecated.js
+|   |   |   |       |   |   |   |   |-- accordion_events.js
+|   |   |   |       |   |   |   |   |-- accordion_methods.js
+|   |   |   |       |   |   |   |   |-- accordion_options.js
+|   |   |   |       |   |   |   |   |-- accordion_test_helpers.js
+|   |   |   |       |   |   |   |   '-- all.html
+|   |   |   |       |   |   |   |-- autocomplete
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- autocomplete.html
+|   |   |   |       |   |   |   |   |-- autocomplete_common.js
+|   |   |   |       |   |   |   |   |-- autocomplete_core.js
+|   |   |   |       |   |   |   |   |-- autocomplete_events.js
+|   |   |   |       |   |   |   |   |-- autocomplete_methods.js
+|   |   |   |       |   |   |   |   |-- autocomplete_options.js
+|   |   |   |       |   |   |   |   |-- remote_object_array_labels.txt
+|   |   |   |       |   |   |   |   |-- remote_object_array_values.txt
+|   |   |   |       |   |   |   |   '-- remote_string_array.txt
+|   |   |   |       |   |   |   |-- button
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- button.html
+|   |   |   |       |   |   |   |   |-- button_common.js
+|   |   |   |       |   |   |   |   |-- button_core.js
+|   |   |   |       |   |   |   |   |-- button_events.js
+|   |   |   |       |   |   |   |   |-- button_methods.js
+|   |   |   |       |   |   |   |   |-- button_options.js
+|   |   |   |       |   |   |   |   '-- button_tickets.js
+|   |   |   |       |   |   |   |-- core
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- core.html
+|   |   |   |       |   |   |   |   |-- core.js
+|   |   |   |       |   |   |   |   '-- selector.js
+|   |   |   |       |   |   |   |-- datepicker
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- datepicker.html
+|   |   |   |       |   |   |   |   |-- datepicker_core.js
+|   |   |   |       |   |   |   |   |-- datepicker_defaults.js
+|   |   |   |       |   |   |   |   |-- datepicker_events.js
+|   |   |   |       |   |   |   |   |-- datepicker_methods.js
+|   |   |   |       |   |   |   |   |-- datepicker_options.js
+|   |   |   |       |   |   |   |   '-- datepicker_tickets.js
+|   |   |   |       |   |   |   |-- dialog
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- dialog.html
+|   |   |   |       |   |   |   |   |-- dialog_common.js
+|   |   |   |       |   |   |   |   |-- dialog_core.js
+|   |   |   |       |   |   |   |   |-- dialog_events.js
+|   |   |   |       |   |   |   |   |-- dialog_methods.js
+|   |   |   |       |   |   |   |   |-- dialog_options.js
+|   |   |   |       |   |   |   |   '-- dialog_tickets.js
+|   |   |   |       |   |   |   |-- draggable
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- draggable.html
+|   |   |   |       |   |   |   |   |-- draggable_common.js
+|   |   |   |       |   |   |   |   |-- draggable_core.js
+|   |   |   |       |   |   |   |   |-- draggable_events.js
+|   |   |   |       |   |   |   |   |-- draggable_methods.js
+|   |   |   |       |   |   |   |   '-- draggable_options.js
+|   |   |   |       |   |   |   |-- droppable
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- droppable.html
+|   |   |   |       |   |   |   |   |-- droppable_common.js
+|   |   |   |       |   |   |   |   |-- droppable_core.js
+|   |   |   |       |   |   |   |   |-- droppable_events.js
+|   |   |   |       |   |   |   |   |-- droppable_methods.js
+|   |   |   |       |   |   |   |   '-- droppable_options.js
+|   |   |   |       |   |   |   |-- effects
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- effects.html
+|   |   |   |       |   |   |   |   |-- effects_core.js
+|   |   |   |       |   |   |   |   '-- effects_scale.js
+|   |   |   |       |   |   |   |-- images
+|   |   |   |       |   |   |   |   '-- jqueryui_32x32.png
+|   |   |   |       |   |   |   |-- menu
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- menu.html
+|   |   |   |       |   |   |   |   |-- menu_common.js
+|   |   |   |       |   |   |   |   |-- menu_core.js
+|   |   |   |       |   |   |   |   |-- menu_events.js
+|   |   |   |       |   |   |   |   |-- menu_methods.js
+|   |   |   |       |   |   |   |   |-- menu_options.js
+|   |   |   |       |   |   |   |   '-- menu_test_helpers.js
+|   |   |   |       |   |   |   |-- position
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- position.html
+|   |   |   |       |   |   |   |   |-- position_core.js
+|   |   |   |       |   |   |   |   |-- position_deprecated.html
+|   |   |   |       |   |   |   |   '-- position_deprecated.js
+|   |   |   |       |   |   |   |-- progressbar
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- progressbar.html
+|   |   |   |       |   |   |   |   |-- progressbar_common.js
+|   |   |   |       |   |   |   |   |-- progressbar_core.js
+|   |   |   |       |   |   |   |   |-- progressbar_events.js
+|   |   |   |       |   |   |   |   |-- progressbar_methods.js
+|   |   |   |       |   |   |   |   '-- progressbar_options.js
+|   |   |   |       |   |   |   |-- resizable
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- resizable.html
+|   |   |   |       |   |   |   |   |-- resizable_common.js
+|   |   |   |       |   |   |   |   |-- resizable_core.js
+|   |   |   |       |   |   |   |   |-- resizable_events.js
+|   |   |   |       |   |   |   |   |-- resizable_methods.js
+|   |   |   |       |   |   |   |   |-- resizable_options.js
+|   |   |   |       |   |   |   |   '-- images
+|   |   |   |       |   |   |   |       '-- test.jpg
+|   |   |   |       |   |   |   |-- selectable
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- selectable.html
+|   |   |   |       |   |   |   |   |-- selectable_common.js
+|   |   |   |       |   |   |   |   |-- selectable_core.js
+|   |   |   |       |   |   |   |   |-- selectable_events.js
+|   |   |   |       |   |   |   |   |-- selectable_methods.js
+|   |   |   |       |   |   |   |   '-- selectable_options.js
+|   |   |   |       |   |   |   |-- slider
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- slider.html
+|   |   |   |       |   |   |   |   |-- slider_common.js
+|   |   |   |       |   |   |   |   |-- slider_core.js
+|   |   |   |       |   |   |   |   |-- slider_events.js
+|   |   |   |       |   |   |   |   |-- slider_methods.js
+|   |   |   |       |   |   |   |   '-- slider_options.js
+|   |   |   |       |   |   |   |-- sortable
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- sortable.html
+|   |   |   |       |   |   |   |   |-- sortable_common.js
+|   |   |   |       |   |   |   |   |-- sortable_core.js
+|   |   |   |       |   |   |   |   |-- sortable_events.js
+|   |   |   |       |   |   |   |   |-- sortable_methods.js
+|   |   |   |       |   |   |   |   |-- sortable_options.js
+|   |   |   |       |   |   |   |   '-- sortable_tickets.js
+|   |   |   |       |   |   |   |-- spinner
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- spinner.html
+|   |   |   |       |   |   |   |   |-- spinner_common.js
+|   |   |   |       |   |   |   |   |-- spinner_core.js
+|   |   |   |       |   |   |   |   |-- spinner_events.js
+|   |   |   |       |   |   |   |   |-- spinner_methods.js
+|   |   |   |       |   |   |   |   |-- spinner_options.js
+|   |   |   |       |   |   |   |   '-- spinner_test_helpers.js
+|   |   |   |       |   |   |   |-- tabs
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- tabs.html
+|   |   |   |       |   |   |   |   |-- tabs_common.js
+|   |   |   |       |   |   |   |   |-- tabs_common_deprecated.js
+|   |   |   |       |   |   |   |   |-- tabs_core.js
+|   |   |   |       |   |   |   |   |-- tabs_deprecated.html
+|   |   |   |       |   |   |   |   |-- tabs_deprecated.js
+|   |   |   |       |   |   |   |   |-- tabs_events.js
+|   |   |   |       |   |   |   |   |-- tabs_methods.js
+|   |   |   |       |   |   |   |   |-- tabs_options.js
+|   |   |   |       |   |   |   |   |-- tabs_test_helpers.js
+|   |   |   |       |   |   |   |   '-- data
+|   |   |   |       |   |   |   |       '-- test.html
+|   |   |   |       |   |   |   |-- tooltip
+|   |   |   |       |   |   |   |   |-- all.html
+|   |   |   |       |   |   |   |   |-- tooltip.html
+|   |   |   |       |   |   |   |   |-- tooltip_common.js
+|   |   |   |       |   |   |   |   |-- tooltip_core.js
+|   |   |   |       |   |   |   |   |-- tooltip_events.js
+|   |   |   |       |   |   |   |   |-- tooltip_methods.js
+|   |   |   |       |   |   |   |   '-- tooltip_options.js
+|   |   |   |       |   |   |   '-- widget
+|   |   |   |       |   |   |       |-- all.html
+|   |   |   |       |   |   |       |-- widget.html
+|   |   |   |       |   |   |       |-- widget_animation.js
+|   |   |   |       |   |   |       |-- widget_core.js
+|   |   |   |       |   |   |       '-- widget_extend.js
+|   |   |   |       |   |   '-- visual
+|   |   |   |       |   |       |-- index.html
+|   |   |   |       |   |       |-- theme.html
+|   |   |   |       |   |       |-- visual.css
+|   |   |   |       |   |       |-- accordion
+|   |   |   |       |   |       |   '-- icons.html
+|   |   |   |       |   |       |-- addClass
+|   |   |   |       |   |       |   '-- queue.html
+|   |   |   |       |   |       |-- button
+|   |   |   |       |   |       |   |-- button.html
+|   |   |   |       |   |       |   '-- performance.html
+|   |   |   |       |   |       |-- compound
+|   |   |   |       |   |       |   |-- accordion_tabs.html
+|   |   |   |       |   |       |   |-- datepicker_dialog.html
+|   |   |   |       |   |       |   |-- dialog_widgets.html
+|   |   |   |       |   |       |   |-- draggable_accordion.html
+|   |   |   |       |   |       |   |-- draggable_accordion_accordion_tabs_draggable.html
+|   |   |   |       |   |       |   |-- sortable_accordion_sortable_tabs.html
+|   |   |   |       |   |       |   |-- tabs_tabs.html
+|   |   |   |       |   |       |   '-- tabs_tooltips.html
+|   |   |   |       |   |       |-- dialog
+|   |   |   |       |   |       |   '-- performance.html
+|   |   |   |       |   |       |-- effects
+|   |   |   |       |   |       |   |-- all.html
+|   |   |   |       |   |       |   |-- effects.css
+|   |   |   |       |   |       |   |-- effects.js
+|   |   |   |       |   |       |   '-- scale.html
+|   |   |   |       |   |       |-- menu
+|   |   |   |       |   |       |   '-- menu.html
+|   |   |   |       |   |       |-- position
+|   |   |   |       |   |       |   |-- position.html
+|   |   |   |       |   |       |   '-- position_feedback.html
+|   |   |   |       |   |       '-- tooltip
+|   |   |   |       |   |           |-- animations.html
+|   |   |   |       |   |           '-- tooltip.html
+|   |   |   |       |   |-- themes
+|   |   |   |       |   |   '-- base
+|   |   |   |       |   |       |-- jquery.ui.accordion.css
+|   |   |   |       |   |       |-- jquery.ui.all.css
+|   |   |   |       |   |       |-- jquery.ui.autocomplete.css
+|   |   |   |       |   |       |-- jquery.ui.base.css
+|   |   |   |       |   |       |-- jquery.ui.button.css
+|   |   |   |       |   |       |-- jquery.ui.core.css
+|   |   |   |       |   |       |-- jquery.ui.datepicker.css
+|   |   |   |       |   |       |-- jquery.ui.dialog.css
+|   |   |   |       |   |       |-- jquery.ui.menu.css
+|   |   |   |       |   |       |-- jquery.ui.progressbar.css
+|   |   |   |       |   |       |-- jquery.ui.resizable.css
+|   |   |   |       |   |       |-- jquery.ui.selectable.css
+|   |   |   |       |   |       |-- jquery.ui.slider.css
+|   |   |   |       |   |       |-- jquery.ui.spinner.css
+|   |   |   |       |   |       |-- jquery.ui.tabs.css
+|   |   |   |       |   |       |-- jquery.ui.theme.css
+|   |   |   |       |   |       |-- jquery.ui.tooltip.css
+|   |   |   |       |   |       '-- images
+|   |   |   |       |   |           |-- ui-bg_flat_0_aaaaaa_40x100.png
+|   |   |   |       |   |           |-- ui-bg_flat_75_ffffff_40x100.png
+|   |   |   |       |   |           |-- ui-bg_glass_55_fbf9ee_1x400.png
+|   |   |   |       |   |           |-- ui-bg_glass_65_ffffff_1x400.png
+|   |   |   |       |   |           |-- ui-bg_glass_75_dadada_1x400.png
+|   |   |   |       |   |           |-- ui-bg_glass_75_e6e6e6_1x400.png
+|   |   |   |       |   |           |-- ui-bg_glass_95_fef1ec_1x400.png
+|   |   |   |       |   |           |-- ui-bg_highlight-soft_75_cccccc_1x100.png
+|   |   |   |       |   |           |-- ui-icons_222222_256x240.png
+|   |   |   |       |   |           |-- ui-icons_2e83ff_256x240.png
+|   |   |   |       |   |           |-- ui-icons_454545_256x240.png
+|   |   |   |       |   |           |-- ui-icons_888888_256x240.png
+|   |   |   |       |   |           '-- ui-icons_cd0a0a_256x240.png
+|   |   |   |       |   '-- ui
+|   |   |   |       |       |-- .jshintrc
+|   |   |   |       |       |-- jquery.effects.blind.js
+|   |   |   |       |       |-- jquery.effects.bounce.js
+|   |   |   |       |       |-- jquery.effects.clip.js
+|   |   |   |       |       |-- jquery.effects.core.js
+|   |   |   |       |       |-- jquery.effects.drop.js
+|   |   |   |       |       |-- jquery.effects.explode.js
+|   |   |   |       |       |-- jquery.effects.fade.js
+|   |   |   |       |       |-- jquery.effects.fold.js
+|   |   |   |       |       |-- jquery.effects.highlight.js
+|   |   |   |       |       |-- jquery.effects.pulsate.js
+|   |   |   |       |       |-- jquery.effects.scale.js
+|   |   |   |       |       |-- jquery.effects.shake.js
+|   |   |   |       |       |-- jquery.effects.slide.js
+|   |   |   |       |       |-- jquery.effects.transfer.js
+|   |   |   |       |       |-- jquery.ui.accordion.js
+|   |   |   |       |       |-- jquery.ui.autocomplete.js
+|   |   |   |       |       |-- jquery.ui.button.js
+|   |   |   |       |       |-- jquery.ui.core.js
+|   |   |   |       |       |-- jquery.ui.datepicker.js
+|   |   |   |       |       |-- jquery.ui.dialog.js
+|   |   |   |       |       |-- jquery.ui.draggable.js
+|   |   |   |       |       |-- jquery.ui.droppable.js
+|   |   |   |       |       |-- jquery.ui.menu.js
+|   |   |   |       |       |-- jquery.ui.mouse.js
+|   |   |   |       |       |-- jquery.ui.position.js
+|   |   |   |       |       |-- jquery.ui.progressbar.js
+|   |   |   |       |       |-- jquery.ui.resizable.js
+|   |   |   |       |       |-- jquery.ui.selectable.js
+|   |   |   |       |       |-- jquery.ui.slider.js
+|   |   |   |       |       |-- jquery.ui.sortable.js
+|   |   |   |       |       |-- jquery.ui.spinner.js
+|   |   |   |       |       |-- jquery.ui.tabs.js
+|   |   |   |       |       |-- jquery.ui.tooltip.js
+|   |   |   |       |       |-- jquery.ui.widget.js
+|   |   |   |       |       '-- i18n
+|   |   |   |       |           |-- jquery.ui.datepicker-af.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ar-DZ.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ar.js
+|   |   |   |       |           |-- jquery.ui.datepicker-az.js
+|   |   |   |       |           |-- jquery.ui.datepicker-bg.js
+|   |   |   |       |           |-- jquery.ui.datepicker-bs.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ca.js
+|   |   |   |       |           |-- jquery.ui.datepicker-cs.js
+|   |   |   |       |           |-- jquery.ui.datepicker-cy-GB.js
+|   |   |   |       |           |-- jquery.ui.datepicker-da.js
+|   |   |   |       |           |-- jquery.ui.datepicker-de.js
+|   |   |   |       |           |-- jquery.ui.datepicker-el.js
+|   |   |   |       |           |-- jquery.ui.datepicker-en-AU.js
+|   |   |   |       |           |-- jquery.ui.datepicker-en-GB.js
+|   |   |   |       |           |-- jquery.ui.datepicker-en-NZ.js
+|   |   |   |       |           |-- jquery.ui.datepicker-eo.js
+|   |   |   |       |           |-- jquery.ui.datepicker-es.js
+|   |   |   |       |           |-- jquery.ui.datepicker-et.js
+|   |   |   |       |           |-- jquery.ui.datepicker-eu.js
+|   |   |   |       |           |-- jquery.ui.datepicker-fa.js
+|   |   |   |       |           |-- jquery.ui.datepicker-fi.js
+|   |   |   |       |           |-- jquery.ui.datepicker-fo.js
+|   |   |   |       |           |-- jquery.ui.datepicker-fr-CH.js
+|   |   |   |       |           |-- jquery.ui.datepicker-fr.js
+|   |   |   |       |           |-- jquery.ui.datepicker-gl.js
+|   |   |   |       |           |-- jquery.ui.datepicker-he.js
+|   |   |   |       |           |-- jquery.ui.datepicker-hi.js
+|   |   |   |       |           |-- jquery.ui.datepicker-hr.js
+|   |   |   |       |           |-- jquery.ui.datepicker-hu.js
+|   |   |   |       |           |-- jquery.ui.datepicker-hy.js
+|   |   |   |       |           |-- jquery.ui.datepicker-id.js
+|   |   |   |       |           |-- jquery.ui.datepicker-is.js
+|   |   |   |       |           |-- jquery.ui.datepicker-it.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ja.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ka.js
+|   |   |   |       |           |-- jquery.ui.datepicker-kk.js
+|   |   |   |       |           |-- jquery.ui.datepicker-km.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ko.js
+|   |   |   |       |           |-- jquery.ui.datepicker-lb.js
+|   |   |   |       |           |-- jquery.ui.datepicker-lt.js
+|   |   |   |       |           |-- jquery.ui.datepicker-lv.js
+|   |   |   |       |           |-- jquery.ui.datepicker-mk.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ml.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ms.js
+|   |   |   |       |           |-- jquery.ui.datepicker-nl-BE.js
+|   |   |   |       |           |-- jquery.ui.datepicker-nl.js
+|   |   |   |       |           |-- jquery.ui.datepicker-no.js
+|   |   |   |       |           |-- jquery.ui.datepicker-pl.js
+|   |   |   |       |           |-- jquery.ui.datepicker-pt-BR.js
+|   |   |   |       |           |-- jquery.ui.datepicker-pt.js
+|   |   |   |       |           |-- jquery.ui.datepicker-rm.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ro.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ru.js
+|   |   |   |       |           |-- jquery.ui.datepicker-sk.js
+|   |   |   |       |           |-- jquery.ui.datepicker-sl.js
+|   |   |   |       |           |-- jquery.ui.datepicker-sq.js
+|   |   |   |       |           |-- jquery.ui.datepicker-sr-SR.js
+|   |   |   |       |           |-- jquery.ui.datepicker-sr.js
+|   |   |   |       |           |-- jquery.ui.datepicker-sv.js
+|   |   |   |       |           |-- jquery.ui.datepicker-ta.js
+|   |   |   |       |           |-- jquery.ui.datepicker-th.js
+|   |   |   |       |           |-- jquery.ui.datepicker-tj.js
+|   |   |   |       |           |-- jquery.ui.datepicker-tr.js
+|   |   |   |       |           |-- jquery.ui.datepicker-uk.js
+|   |   |   |       |           |-- jquery.ui.datepicker-vi.js
+|   |   |   |       |           |-- jquery.ui.datepicker-zh-CN.js
+|   |   |   |       |           |-- jquery.ui.datepicker-zh-HK.js
+|   |   |   |       |           '-- jquery.ui.datepicker-zh-TW.js
+|   |   |   |       '-- syntax
+|   |   |   |           |-- file1.js
+|   |   |   |           |-- file2.js
+|   |   |   |           |-- test.html
+|   |   |   |           |-- test1inline.js
+|   |   |   |           |-- test1main.js
+|   |   |   |           '-- tokens.js
+|   |   |   |-- JSLint
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   |-- thirdparty
+|   |   |   |   |   '-- jslint
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- .brackets.json
+|   |   |   |       |-- different-indent.js
+|   |   |   |       |-- errors.js
+|   |   |   |       '-- no-errors.js
+|   |   |   |-- LESSSupport
+|   |   |   |   '-- main.js
+|   |   |   |-- LightTheme
+|   |   |   |   |-- main.less
+|   |   |   |   '-- package.json
+|   |   |   |-- QuickOpenCSS
+|   |   |   |   '-- main.js
+|   |   |   |-- QuickOpenHTML
+|   |   |   |   '-- main.js
+|   |   |   |-- QuickOpenJavaScript
+|   |   |   |   '-- main.js
+|   |   |   |-- QuickView
+|   |   |   |   |-- main.js
+|   |   |   |   |-- preview_bg.png
+|   |   |   |   |-- preview_bg_dark.png
+|   |   |   |   |-- QuickView.less
+|   |   |   |   |-- QuickViewTemplate.html
+|   |   |   |   |-- unittests.js
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- test.css
+|   |   |   |       '-- test.js
+|   |   |   |-- RecentProjects
+|   |   |   |   |-- keyboard.json
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   |-- htmlContent
+|   |   |   |   |   '-- projects-menu.html
+|   |   |   |   '-- styles
+|   |   |   |       |-- down-arrow.svg
+|   |   |   |       '-- styles.less
+|   |   |   |-- StaticServer
+|   |   |   |   |-- main.js
+|   |   |   |   |-- StaticServer.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   |-- node
+|   |   |   |   |   |-- StaticServerDomain.js
+|   |   |   |   |   '-- node_modules
+|   |   |   |   |       '-- connect
+|   |   |   |   |           |-- .npmignore
+|   |   |   |   |           |-- .travis.yml
+|   |   |   |   |           |-- index.js
+|   |   |   |   |           |-- LICENSE
+|   |   |   |   |           |-- package.json
+|   |   |   |   |           |-- Readme.md
+|   |   |   |   |           |-- lib
+|   |   |   |   |           |   |-- cache.js
+|   |   |   |   |           |   |-- connect.js
+|   |   |   |   |           |   |-- index.js
+|   |   |   |   |           |   |-- patch.js
+|   |   |   |   |           |   |-- proto.js
+|   |   |   |   |           |   |-- utils.js
+|   |   |   |   |           |   |-- middleware
+|   |   |   |   |           |   |   |-- basicAuth.js
+|   |   |   |   |           |   |   |-- bodyParser.js
+|   |   |   |   |           |   |   |-- compress.js
+|   |   |   |   |           |   |   |-- cookieParser.js
+|   |   |   |   |           |   |   |-- cookieSession.js
+|   |   |   |   |           |   |   |-- csrf.js
+|   |   |   |   |           |   |   |-- directory.js
+|   |   |   |   |           |   |   |-- errorHandler.js
+|   |   |   |   |           |   |   |-- favicon.js
+|   |   |   |   |           |   |   |-- json.js
+|   |   |   |   |           |   |   |-- limit.js
+|   |   |   |   |           |   |   |-- logger.js
+|   |   |   |   |           |   |   |-- methodOverride.js
+|   |   |   |   |           |   |   |-- multipart.js
+|   |   |   |   |           |   |   |-- query.js
+|   |   |   |   |           |   |   |-- responseTime.js
+|   |   |   |   |           |   |   |-- session.js
+|   |   |   |   |           |   |   |-- static.js
+|   |   |   |   |           |   |   |-- staticCache.js
+|   |   |   |   |           |   |   |-- timeout.js
+|   |   |   |   |           |   |   |-- urlencoded.js
+|   |   |   |   |           |   |   |-- vhost.js
+|   |   |   |   |           |   |   '-- session
+|   |   |   |   |           |   |       |-- cookie.js
+|   |   |   |   |           |   |       |-- memory.js
+|   |   |   |   |           |   |       |-- session.js
+|   |   |   |   |           |   |       '-- store.js
+|   |   |   |   |           |   '-- public
+|   |   |   |   |           |       |-- directory.html
+|   |   |   |   |           |       |-- error.html
+|   |   |   |   |           |       |-- favicon.ico
+|   |   |   |   |           |       |-- style.css
+|   |   |   |   |           |       '-- icons
+|   |   |   |   |           |           |-- page.png
+|   |   |   |   |           |           |-- page_add.png
+|   |   |   |   |           |           |-- page_attach.png
+|   |   |   |   |           |           |-- page_code.png
+|   |   |   |   |           |           |-- page_copy.png
+|   |   |   |   |           |           |-- page_delete.png
+|   |   |   |   |           |           |-- page_edit.png
+|   |   |   |   |           |           |-- page_error.png
+|   |   |   |   |           |           |-- page_excel.png
+|   |   |   |   |           |           |-- page_find.png
+|   |   |   |   |           |           |-- page_gear.png
+|   |   |   |   |           |           |-- page_go.png
+|   |   |   |   |           |           |-- page_green.png
+|   |   |   |   |           |           |-- page_key.png
+|   |   |   |   |           |           |-- page_lightning.png
+|   |   |   |   |           |           |-- page_link.png
+|   |   |   |   |           |           |-- page_paintbrush.png
+|   |   |   |   |           |           |-- page_paste.png
+|   |   |   |   |           |           |-- page_red.png
+|   |   |   |   |           |           |-- page_refresh.png
+|   |   |   |   |           |           |-- page_save.png
+|   |   |   |   |           |           |-- page_white.png
+|   |   |   |   |           |           |-- page_white_acrobat.png
+|   |   |   |   |           |           |-- page_white_actionscript.png
+|   |   |   |   |           |           |-- page_white_add.png
+|   |   |   |   |           |           |-- page_white_c.png
+|   |   |   |   |           |           |-- page_white_camera.png
+|   |   |   |   |           |           |-- page_white_cd.png
+|   |   |   |   |           |           |-- page_white_code.png
+|   |   |   |   |           |           |-- page_white_code_red.png
+|   |   |   |   |           |           |-- page_white_coldfusion.png
+|   |   |   |   |           |           |-- page_white_compressed.png
+|   |   |   |   |           |           |-- page_white_copy.png
+|   |   |   |   |           |           |-- page_white_cplusplus.png
+|   |   |   |   |           |           |-- page_white_csharp.png
+|   |   |   |   |           |           |-- page_white_cup.png
+|   |   |   |   |           |           |-- page_white_database.png
+|   |   |   |   |           |           |-- page_white_delete.png
+|   |   |   |   |           |           |-- page_white_dvd.png
+|   |   |   |   |           |           |-- page_white_edit.png
+|   |   |   |   |           |           |-- page_white_error.png
+|   |   |   |   |           |           |-- page_white_excel.png
+|   |   |   |   |           |           |-- page_white_find.png
+|   |   |   |   |           |           |-- page_white_flash.png
+|   |   |   |   |           |           |-- page_white_freehand.png
+|   |   |   |   |           |           |-- page_white_gear.png
+|   |   |   |   |           |           |-- page_white_get.png
+|   |   |   |   |           |           |-- page_white_go.png
+|   |   |   |   |           |           |-- page_white_h.png
+|   |   |   |   |           |           |-- page_white_horizontal.png
+|   |   |   |   |           |           |-- page_white_key.png
+|   |   |   |   |           |           |-- page_white_lightning.png
+|   |   |   |   |           |           |-- page_white_link.png
+|   |   |   |   |           |           |-- page_white_magnify.png
+|   |   |   |   |           |           |-- page_white_medal.png
+|   |   |   |   |           |           |-- page_white_office.png
+|   |   |   |   |           |           |-- page_white_paint.png
+|   |   |   |   |           |           |-- page_white_paintbrush.png
+|   |   |   |   |           |           |-- page_white_paste.png
+|   |   |   |   |           |           |-- page_white_php.png
+|   |   |   |   |           |           |-- page_white_picture.png
+|   |   |   |   |           |           |-- page_white_powerpoint.png
+|   |   |   |   |           |           |-- page_white_put.png
+|   |   |   |   |           |           |-- page_white_ruby.png
+|   |   |   |   |           |           |-- page_white_stack.png
+|   |   |   |   |           |           |-- page_white_star.png
+|   |   |   |   |           |           |-- page_white_swoosh.png
+|   |   |   |   |           |           |-- page_white_text.png
+|   |   |   |   |           |           |-- page_white_text_width.png
+|   |   |   |   |           |           |-- page_white_tux.png
+|   |   |   |   |           |           |-- page_white_vector.png
+|   |   |   |   |           |           |-- page_white_visualstudio.png
+|   |   |   |   |           |           |-- page_white_width.png
+|   |   |   |   |           |           |-- page_white_word.png
+|   |   |   |   |           |           |-- page_white_world.png
+|   |   |   |   |           |           |-- page_white_wrench.png
+|   |   |   |   |           |           |-- page_white_zip.png
+|   |   |   |   |           |           |-- page_word.png
+|   |   |   |   |           |           '-- page_world.png
+|   |   |   |   |           '-- node_modules
+|   |   |   |   |               |-- buffer-crc32
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- .travis.yml
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   |-- README.md
+|   |   |   |   |               |   '-- tests
+|   |   |   |   |               |       '-- crc.test.js
+|   |   |   |   |               |-- bytes
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- component.json
+|   |   |   |   |               |   |-- History.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- Makefile
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   '-- Readme.md
+|   |   |   |   |               |-- cookie
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- .travis.yml
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- LICENSE
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   |-- README.md
+|   |   |   |   |               |   '-- test
+|   |   |   |   |               |       |-- mocha.opts
+|   |   |   |   |               |       |-- parse.js
+|   |   |   |   |               |       '-- serialize.js
+|   |   |   |   |               |-- cookie-signature
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- History.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- Makefile
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   '-- Readme.md
+|   |   |   |   |               |-- debug
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- component.json
+|   |   |   |   |               |   |-- debug.js
+|   |   |   |   |               |   |-- History.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   |-- Readme.md
+|   |   |   |   |               |   |-- example
+|   |   |   |   |               |   |   |-- app.js
+|   |   |   |   |               |   |   |-- browser.html
+|   |   |   |   |               |   |   |-- wildcards.js
+|   |   |   |   |               |   |   '-- worker.js
+|   |   |   |   |               |   '-- lib
+|   |   |   |   |               |       '-- debug.js
+|   |   |   |   |               |-- fresh
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- History.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- Makefile
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   '-- Readme.md
+|   |   |   |   |               |-- methods
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   '-- package.json
+|   |   |   |   |               |-- multiparty
+|   |   |   |   |               |   |-- .jshintrc
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- .travis.yml
+|   |   |   |   |               |   |-- CHANGELOG.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- LICENSE
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   |-- README.md
+|   |   |   |   |               |   |-- examples
+|   |   |   |   |               |   |   |-- azureblobstorage.js
+|   |   |   |   |               |   |   |-- s3.js
+|   |   |   |   |               |   |   '-- upload.js
+|   |   |   |   |               |   |-- node_modules
+|   |   |   |   |               |   |   |-- readable-stream
+|   |   |   |   |               |   |   |   |-- duplex.js
+|   |   |   |   |               |   |   |   |-- float.patch
+|   |   |   |   |               |   |   |   |-- fs.js
+|   |   |   |   |               |   |   |   |-- LICENSE
+|   |   |   |   |               |   |   |   |-- package.json
+|   |   |   |   |               |   |   |   |-- passthrough.js
+|   |   |   |   |               |   |   |   |-- readable.js
+|   |   |   |   |               |   |   |   |-- README.md
+|   |   |   |   |               |   |   |   |-- transform.js
+|   |   |   |   |               |   |   |   |-- writable.js
+|   |   |   |   |               |   |   |   |-- zlib.js
+|   |   |   |   |               |   |   |   |-- examples
+|   |   |   |   |               |   |   |   |   |-- CAPSLOCKTYPER.JS
+|   |   |   |   |               |   |   |   |   |-- typer-fsr.js
+|   |   |   |   |               |   |   |   |   '-- typer.js
+|   |   |   |   |               |   |   |   |-- lib
+|   |   |   |   |               |   |   |   |   |-- _stream_duplex.js
+|   |   |   |   |               |   |   |   |   |-- _stream_passthrough.js
+|   |   |   |   |               |   |   |   |   |-- _stream_readable.js
+|   |   |   |   |               |   |   |   |   |-- _stream_transform.js
+|   |   |   |   |               |   |   |   |   '-- _stream_writable.js
+|   |   |   |   |               |   |   |   '-- test
+|   |   |   |   |               |   |   |       |-- common.js
+|   |   |   |   |               |   |   |       |-- fixtures
+|   |   |   |   |               |   |   |       |   '-- x1024.txt
+|   |   |   |   |               |   |   |       '-- simple
+|   |   |   |   |               |   |   |           |-- test-stream2-basic.js
+|   |   |   |   |               |   |   |           |-- test-stream2-compatibility.js
+|   |   |   |   |               |   |   |           |-- test-stream2-finish-pipe.js
+|   |   |   |   |               |   |   |           |-- test-stream2-large-read-stall.js
+|   |   |   |   |               |   |   |           |-- test-stream2-objects.js
+|   |   |   |   |               |   |   |           |-- test-stream2-pipe-error-handling.js
+|   |   |   |   |               |   |   |           |-- test-stream2-push.js
+|   |   |   |   |               |   |   |           |-- test-stream2-read-sync-stack.js
+|   |   |   |   |               |   |   |           |-- test-stream2-readable-empty-buffer-no-eof.js
+|   |   |   |   |               |   |   |           |-- test-stream2-readable-from-list.js
+|   |   |   |   |               |   |   |           |-- test-stream2-readable-legacy-drain.js
+|   |   |   |   |               |   |   |           |-- test-stream2-readable-non-empty-end.js
+|   |   |   |   |               |   |   |           |-- test-stream2-set-encoding.js
+|   |   |   |   |               |   |   |           |-- test-stream2-transform.js
+|   |   |   |   |               |   |   |           |-- test-stream2-unpipe-drain.js
+|   |   |   |   |               |   |   |           |-- test-stream2-unpipe-leak.js
+|   |   |   |   |               |   |   |           '-- test-stream2-writable.js
+|   |   |   |   |               |   |   '-- stream-counter
+|   |   |   |   |               |   |       |-- .npmignore
+|   |   |   |   |               |   |       |-- index.js
+|   |   |   |   |               |   |       |-- package.json
+|   |   |   |   |               |   |       |-- README.md
+|   |   |   |   |               |   |       '-- test
+|   |   |   |   |               |   |           |-- test.js
+|   |   |   |   |               |   |           '-- test.txt
+|   |   |   |   |               |   '-- test
+|   |   |   |   |               |       |-- bench-multipart-parser.js
+|   |   |   |   |               |       |-- record.js
+|   |   |   |   |               |       |-- test.js
+|   |   |   |   |               |       |-- fixture
+|   |   |   |   |               |       |   |-- multi_video.upload
+|   |   |   |   |               |       |   |-- multipart.js
+|   |   |   |   |               |       |   |-- file
+|   |   |   |   |               |       |   |   |-- beta-sticker-1.png
+|   |   |   |   |               |       |   |   |-- binaryfile.tar.gz
+|   |   |   |   |               |       |   |   |-- blank.gif
+|   |   |   |   |               |       |   |   |-- funkyfilename.txt
+|   |   |   |   |               |       |   |   |-- menu_separator.png
+|   |   |   |   |               |       |   |   |-- pf1y5.png
+|   |   |   |   |               |       |   |   '-- plain.txt
+|   |   |   |   |               |       |   |-- http
+|   |   |   |   |               |       |   |   |-- encoding
+|   |   |   |   |               |       |   |   |   |-- beta-sticker-1.png.http
+|   |   |   |   |               |       |   |   |   |-- binaryfile.tar.gz.http
+|   |   |   |   |               |       |   |   |   |-- blank.gif.http
+|   |   |   |   |               |       |   |   |   |-- menu_seperator.png.http
+|   |   |   |   |               |       |   |   |   |-- pf1y5.png.http
+|   |   |   |   |               |       |   |   |   '-- plain.txt.http
+|   |   |   |   |               |       |   |   |-- no-filename
+|   |   |   |   |               |       |   |   |   |-- filename-name.http
+|   |   |   |   |               |       |   |   |   '-- generic.http
+|   |   |   |   |               |       |   |   |-- preamble
+|   |   |   |   |               |       |   |   |   |-- crlf.http
+|   |   |   |   |               |       |   |   |   '-- preamble.http
+|   |   |   |   |               |       |   |   |-- special-chars-in-filename
+|   |   |   |   |               |       |   |   |   |-- info.md
+|   |   |   |   |               |       |   |   |   |-- osx-chrome-13.http
+|   |   |   |   |               |       |   |   |   |-- osx-firefox-3.6.http
+|   |   |   |   |               |       |   |   |   |-- osx-safari-5.http
+|   |   |   |   |               |       |   |   |   |-- xp-chrome-12.http
+|   |   |   |   |               |       |   |   |   |-- xp-ie-7.http
+|   |   |   |   |               |       |   |   |   |-- xp-ie-8.http
+|   |   |   |   |               |       |   |   |   '-- xp-safari-5.http
+|   |   |   |   |               |       |   |   '-- workarounds
+|   |   |   |   |               |       |   |       |-- missing-hyphens1.http
+|   |   |   |   |               |       |   |       '-- missing-hyphens2.http
+|   |   |   |   |               |       |   '-- js
+|   |   |   |   |               |       |       |-- encoding.js
+|   |   |   |   |               |       |       |-- no-filename.js
+|   |   |   |   |               |       |       |-- preamble.js
+|   |   |   |   |               |       |       |-- special-chars-in-filename.js
+|   |   |   |   |               |       |       '-- workarounds.js
+|   |   |   |   |               |       '-- standalone
+|   |   |   |   |               |           |-- test-connection-aborted.js
+|   |   |   |   |               |           |-- test-content-transfer-encoding.js
+|   |   |   |   |               |           |-- test-invalid.js
+|   |   |   |   |               |           |-- test-issue-4.js
+|   |   |   |   |               |           '-- test-issue-46.js
+|   |   |   |   |               |-- pause
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- History.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- Makefile
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   '-- Readme.md
+|   |   |   |   |               |-- qs
+|   |   |   |   |               |   |-- .gitmodules
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   '-- Readme.md
+|   |   |   |   |               |-- send
+|   |   |   |   |               |   |-- .npmignore
+|   |   |   |   |               |   |-- History.md
+|   |   |   |   |               |   |-- index.js
+|   |   |   |   |               |   |-- Makefile
+|   |   |   |   |               |   |-- package.json
+|   |   |   |   |               |   |-- Readme.md
+|   |   |   |   |               |   |-- lib
+|   |   |   |   |               |   |   |-- send.js
+|   |   |   |   |               |   |   '-- utils.js
+|   |   |   |   |               |   '-- node_modules
+|   |   |   |   |               |       |-- mime
+|   |   |   |   |               |       |   |-- LICENSE
+|   |   |   |   |               |       |   |-- mime.js
+|   |   |   |   |               |       |   |-- package.json
+|   |   |   |   |               |       |   |-- README.md
+|   |   |   |   |               |       |   |-- test.js
+|   |   |   |   |               |       |   '-- types
+|   |   |   |   |               |       |       |-- mime.types
+|   |   |   |   |               |       |       '-- node.types
+|   |   |   |   |               |       '-- range-parser
+|   |   |   |   |               |           |-- .npmignore
+|   |   |   |   |               |           |-- History.md
+|   |   |   |   |               |           |-- index.js
+|   |   |   |   |               |           |-- Makefile
+|   |   |   |   |               |           |-- package.json
+|   |   |   |   |               |           '-- Readme.md
+|   |   |   |   |               '-- uid2
+|   |   |   |   |                   |-- index.js
+|   |   |   |   |                   '-- package.json
+|   |   |   |   '-- unittest-files
+|   |   |   |       |-- folder1
+|   |   |   |       |   '-- index.txt
+|   |   |   |       '-- folder2
+|   |   |   |           '-- index.txt
+|   |   |   |-- UrlCodeHints
+|   |   |   |   |-- data.json
+|   |   |   |   |-- main.js
+|   |   |   |   |-- unittests.js
+|   |   |   |   '-- testfiles
+|   |   |   |       |-- test.html
+|   |   |   |       '-- subfolder
+|   |   |   |           |-- chevron.png
+|   |   |   |           |-- test.css
+|   |   |   |           |-- test.js
+|   |   |   |           '-- test.scss
+|   |   |   '-- WebPlatformDocs
+|   |   |       |-- css.json
+|   |   |       |-- InlineDocsViewer.html
+|   |   |       |-- InlineDocsViewer.js
+|   |   |       |-- LICENSE
+|   |   |       |-- logo.svg
+|   |   |       |-- main.js
+|   |   |       |-- README.md
+|   |   |       |-- unittests.js
+|   |   |       |-- WebPlatformDocs.less
+|   |   |       '-- unittest-files
+|   |   |           |-- description.html
+|   |   |           |-- test1.css
+|   |   |           '-- test1.html
+|   |   |-- dev
+|   |   |   '-- README.txt
+|   |   '-- samples
+|   |       |-- README.txt
+|   |       |-- BracketsConfigCentral
+|   |       |   |-- main.js
+|   |       |   |-- package.json
+|   |       |   |-- htmlContent
+|   |       |   |   |-- Config.html
+|   |       |   |   '-- logo-sm.png
+|   |       |   '-- styles
+|   |       |       '-- styles.css
+|   |       |-- circular_dependency_test
+|   |       |   |-- main.js
+|   |       |   '-- secondary.js
+|   |       |-- ContextMenuTest
+|   |       |   '-- main.js
+|   |       |-- InlineImageViewer
+|   |       |   |-- InlineImageViewer.html
+|   |       |   |-- InlineImageViewer.js
+|   |       |   '-- main.js
+|   |       |-- LocalizationExample
+|   |       |   |-- main.js
+|   |       |   |-- package.json
+|   |       |   |-- README.md
+|   |       |   |-- strings.js
+|   |       |   |-- htmlContent
+|   |       |   |   '-- sampleHTMLFragment.html
+|   |       |   '-- nls
+|   |       |       |-- strings.js
+|   |       |       |-- fr
+|   |       |       |   '-- strings.js
+|   |       |       '-- root
+|   |       |           '-- strings.js
+|   |       '-- TypingSpeedLogger
+|   |           '-- main.js
+|   |-- file
+|   |   |-- FileUtils.js
+|   |   |-- NativeFileError.js
+|   |   '-- NativeFileSystem.js
+|   |-- filesystem
+|   |   |-- Directory.js
+|   |   |-- File.js
+|   |   |-- FileIndex.js
+|   |   |-- FileSystem.js
+|   |   |-- FileSystemEntry.js
+|   |   |-- FileSystemError.js
+|   |   |-- FileSystemStats.js
+|   |   |-- WatchedRoot.js
+|   |   '-- impls
+|   |       '-- appshell
+|   |           |-- AppshellFileSystem.js
+|   |           '-- node
+|   |               |-- FileWatcherDomain.js
+|   |               '-- node_modules
+|   |                   |-- fsevents
+|   |                   |   |-- binding.gyp
+|   |                   |   |-- CHANGELOG.md
+|   |                   |   |-- fsevents.js
+|   |                   |   |-- LICENSE
+|   |                   |   |-- nodefsevents.cc
+|   |                   |   |-- package.json
+|   |                   |   |-- Readme.md
+|   |                   |   '-- build
+|   |                   |       |-- binding.Makefile
+|   |                   |       |-- config.gypi
+|   |                   |       |-- fswatch.target.mk
+|   |                   |       |-- gyp-mac-tool
+|   |                   |       |-- Makefile
+|   |                   |       '-- Release
+|   |                   |           |-- fswatch.node
+|   |                   |           |-- linker.lock
+|   |                   |           |-- .deps
+|   |                   |           |   |-- Makefile.d
+|   |                   |           |   '-- Release
+|   |                   |           |       |-- fswatch.node.d
+|   |                   |           |       '-- obj.target
+|   |                   |           |           '-- fswatch
+|   |                   |           |               '-- nodefsevents.o.d
+|   |                   |           '-- obj.target
+|   |                   |               '-- fswatch
+|   |                   |                   '-- nodefsevents.o
+|   |                   '-- fsevents_win
+|   |                       |-- binding.gyp
+|   |                       |-- fsevents_win.cpp
+|   |                       |-- fsevents_win.h
+|   |                       |-- fsevents_win.js
+|   |                       '-- build
+|   |                           '-- Release
+|   |                               '-- fswatch_win.node
+|   |-- help
+|   |   '-- HelpCommandHandlers.js
+|   |-- htmlContent
+|   |   |-- about-dialog.html
+|   |   |-- code-hint-list.html
+|   |   |-- contributors-list.html
+|   |   |-- dialog-template.html
+|   |   |-- edit-filter-dialog.html
+|   |   |-- extension-manager-dialog.html
+|   |   |-- extension-manager-view-item.html
+|   |   |-- filter-name.html
+|   |   |-- findreplace-bar.html
+|   |   |-- image-view.html
+|   |   |-- install-extension-dialog.html
+|   |   |-- main-view.html
+|   |   |-- pane.html
+|   |   |-- problems-panel-table.html
+|   |   |-- problems-panel.html
+|   |   |-- project-settings-dialog.html
+|   |   |-- search-panel.html
+|   |   |-- search-results.html
+|   |   |-- search-summary.html
+|   |   |-- themes-settings.html
+|   |   |-- update-dialog.html
+|   |   |-- update-list.html
+|   |   '-- working-set.html
+|   |-- language
+|   |   |-- CodeInspection.js
+|   |   |-- CSSUtils.js
+|   |   |-- HTMLDOMDiff.js
+|   |   |-- HTMLInstrumentation.js
+|   |   |-- HTMLSimpleDOM.js
+|   |   |-- HTMLTokenizer.js
+|   |   |-- HTMLUtils.js
+|   |   |-- JSUtils.js
+|   |   |-- LanguageManager.js
+|   |   '-- languages.json
+|   |-- LiveDevelopment
+|   |   |-- launch.html
+|   |   |-- LiveDevelopment.js
+|   |   |-- LiveDevMultiBrowser.js
+|   |   |-- LiveDevServerManager.js
+|   |   |-- main.js
+|   |   |-- main.less
+|   |   |-- Agents
+|   |   |   |-- ConsoleAgent.js
+|   |   |   |-- CSSAgent.js
+|   |   |   |-- DOMAgent.js
+|   |   |   |-- DOMHelpers.js
+|   |   |   |-- DOMNode.js
+|   |   |   |-- EditAgent.js
+|   |   |   |-- GotoAgent.js
+|   |   |   |-- HighlightAgent.js
+|   |   |   |-- NetworkAgent.js
+|   |   |   |-- RemoteAgent.js
+|   |   |   |-- RemoteFunctions.js
+|   |   |   '-- ScriptAgent.js
+|   |   |-- Documents
+|   |   |   |-- CSSDocument.js
+|   |   |   |-- CSSPreprocessorDocument.js
+|   |   |   |-- HTMLDocument.js
+|   |   |   '-- JSDocument.js
+|   |   |-- Inspector
+|   |   |   |-- inspector.html
+|   |   |   |-- Inspector.js
+|   |   |   |-- Inspector.json
+|   |   |   '-- jsdoc.rb
+|   |   |-- MultiBrowserImpl
+|   |   |   |-- README.md
+|   |   |   |-- documents
+|   |   |   |   |-- LiveCSSDocument.js
+|   |   |   |   |-- LiveDocument.js
+|   |   |   |   '-- LiveHTMLDocument.js
+|   |   |   |-- language
+|   |   |   |   |-- HTMLInstrumentation.js
+|   |   |   |   '-- HTMLSimpleDOM.js
+|   |   |   |-- launchers
+|   |   |   |   |-- Launcher.js
+|   |   |   |   '-- node
+|   |   |   |       |-- LauncherDomain.js
+|   |   |   |       |-- package.json
+|   |   |   |       '-- node_modules
+|   |   |   |           '-- open
+|   |   |   |               |-- .jshintignore
+|   |   |   |               |-- .jshintrc
+|   |   |   |               |-- .npmignore
+|   |   |   |               |-- LICENSE
+|   |   |   |               |-- package.json
+|   |   |   |               |-- README.md
+|   |   |   |               |-- lib
+|   |   |   |               |   '-- open.js
+|   |   |   |               '-- vendor
+|   |   |   |                   '-- xdg-open
+|   |   |   |-- protocol
+|   |   |   |   |-- LiveDevProtocol.js
+|   |   |   |   '-- remote
+|   |   |   |       |-- DocumentObserver.js
+|   |   |   |       '-- LiveDevProtocolRemote.js
+|   |   |   '-- transports
+|   |   |       |-- NodeSocketTransport.js
+|   |   |       |-- node
+|   |   |       |   |-- NodeSocketTransportDomain.js
+|   |   |       |   |-- package.json
+|   |   |       |   '-- node_modules
+|   |   |       |       |-- .bin
+|   |   |       |       |   |-- wscat
+|   |   |       |       |   '-- wscat.cmd
+|   |   |       |       |-- lodash
+|   |   |       |       |   |-- LICENSE.txt
+|   |   |       |       |   |-- lodash.js
+|   |   |       |       |   |-- package.json
+|   |   |       |       |   |-- README.md
+|   |   |       |       |   '-- dist
+|   |   |       |       |       |-- lodash.compat.js
+|   |   |       |       |       |-- lodash.compat.min.js
+|   |   |       |       |       |-- lodash.js
+|   |   |       |       |       |-- lodash.min.js
+|   |   |       |       |       |-- lodash.underscore.js
+|   |   |       |       |       '-- lodash.underscore.min.js
+|   |   |       |       '-- ws
+|   |   |       |           |-- .npmignore
+|   |   |       |           |-- .travis.yml
+|   |   |       |           |-- binding.gyp
+|   |   |       |           |-- builderror.log
+|   |   |       |           |-- History.md
+|   |   |       |           |-- index.js
+|   |   |       |           |-- Makefile
+|   |   |       |           |-- package.json
+|   |   |       |           |-- README.md
+|   |   |       |           |-- bin
+|   |   |       |           |   '-- wscat
+|   |   |       |           |-- lib
+|   |   |       |           |   |-- browser.js
+|   |   |       |           |   |-- BufferPool.js
+|   |   |       |           |   |-- BufferUtil.fallback.js
+|   |   |       |           |   |-- BufferUtil.js
+|   |   |       |           |   |-- ErrorCodes.js
+|   |   |       |           |   |-- Receiver.hixie.js
+|   |   |       |           |   |-- Receiver.js
+|   |   |       |           |   |-- Sender.hixie.js
+|   |   |       |           |   |-- Sender.js
+|   |   |       |           |   |-- Validation.fallback.js
+|   |   |       |           |   |-- Validation.js
+|   |   |       |           |   |-- WebSocket.js
+|   |   |       |           |   '-- WebSocketServer.js
+|   |   |       |           |-- node_modules
+|   |   |       |           |   |-- commander
+|   |   |       |           |   |   |-- index.js
+|   |   |       |           |   |   |-- package.json
+|   |   |       |           |   |   '-- Readme.md
+|   |   |       |           |   |-- nan
+|   |   |       |           |   |   |-- .dntrc
+|   |   |       |           |   |   |-- include_dirs.js
+|   |   |       |           |   |   |-- LICENSE
+|   |   |       |           |   |   |-- nan.h
+|   |   |       |           |   |   |-- package.json
+|   |   |       |           |   |   |-- README.md
+|   |   |       |           |   |   '-- build
+|   |   |       |           |   |       '-- config.gypi
+|   |   |       |           |   |-- options
+|   |   |       |           |   |   |-- .npmignore
+|   |   |       |           |   |   |-- Makefile
+|   |   |       |           |   |   |-- package.json
+|   |   |       |           |   |   |-- README.md
+|   |   |       |           |   |   '-- lib
+|   |   |       |           |   |       '-- options.js
+|   |   |       |           |   '-- tinycolor
+|   |   |       |           |       |-- .npmignore
+|   |   |       |           |       |-- example.js
+|   |   |       |           |       |-- package.json
+|   |   |       |           |       |-- README.md
+|   |   |       |           |       '-- tinycolor.js
+|   |   |       |           '-- src
+|   |   |       |               |-- bufferutil.cc
+|   |   |       |               '-- validation.cc
+|   |   |       '-- remote
+|   |   |           '-- NodeSocketTransportRemote.js
+|   |   '-- Servers
+|   |       |-- BaseServer.js
+|   |       |-- FileServer.js
+|   |       '-- UserServer.js
+|   |-- nls
+|   |   |-- README.md
+|   |   |-- strings-app.js
+|   |   |-- strings.js
+|   |   |-- urls.js
+|   |   |-- cs
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- da
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- de
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- el
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- en-gb
+|   |   |   '-- strings.js
+|   |   |-- es
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- fa-ir
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- fi
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- fr
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- gl
+|   |   |   '-- strings.js
+|   |   |-- hr
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- hu
+|   |   |   '-- strings.js
+|   |   |-- id
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- it
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- ja
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- ko
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- nb
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- nl
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- pl
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- pt-br
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- pt-pt
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- ro
+|   |   |   '-- strings.js
+|   |   |-- root
+|   |   |   |-- strings-app.js
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- ru
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- sk
+|   |   |   '-- strings.js
+|   |   |-- sr
+|   |   |   |-- strings-app.js
+|   |   |   '-- strings.js
+|   |   |-- sv
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- tr
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   |-- uk
+|   |   |   '-- strings.js
+|   |   |-- zh-cn
+|   |   |   |-- strings.js
+|   |   |   '-- urls.js
+|   |   '-- zh-tw
+|   |       |-- strings.js
+|   |       '-- urls.js
+|   |-- preferences
+|   |   |-- PreferencesBase.js
+|   |   |-- PreferencesDialogs.js
+|   |   |-- PreferencesImpl.js
+|   |   |-- PreferencesManager.js
+|   |   '-- PreferenceStorage.js
+|   |-- project
+|   |   |-- FileIndexManager.js
+|   |   |-- FileSyncManager.js
+|   |   |-- FileTreeView.js
+|   |   |-- FileTreeViewModel.js
+|   |   |-- FileViewController.js
+|   |   |-- ProjectManager.js
+|   |   |-- ProjectModel.js
+|   |   |-- SidebarView.js
+|   |   |-- WorkingSetSort.js
+|   |   '-- WorkingSetView.js
+|   |-- search
+|   |   |-- FileFilters.js
+|   |   |-- FindBar.js
+|   |   |-- FindInFiles.js
+|   |   |-- FindInFilesUI.js
+|   |   |-- FindReplace.js
+|   |   |-- FindUtils.js
+|   |   |-- QuickOpen.js
+|   |   |-- ScrollTrackMarkers.js
+|   |   |-- SearchModel.js
+|   |   '-- SearchResultsView.js
+|   |-- styles
+|   |   |-- brackets.less
+|   |   |-- brackets_codemirror_override.less
+|   |   |-- brackets_core_ui_variables.less
+|   |   |-- brackets_fonts.less
+|   |   |-- brackets_mixins.less
+|   |   |-- brackets_patterns_override.less
+|   |   |-- brackets_scrollbars.less
+|   |   |-- brackets_shared.less
+|   |   |-- brackets_theme_default.less
+|   |   |-- brackets_variables.less
+|   |   |-- jsTreeTheme.less
+|   |   |-- Makefile
+|   |   |-- bootstrap
+|   |   |   |-- accordion.less
+|   |   |   |-- alerts.less
+|   |   |   |-- bootstrap.less
+|   |   |   |-- breadcrumbs.less
+|   |   |   |-- button-groups.less
+|   |   |   |-- buttons.less
+|   |   |   |-- carousel.less
+|   |   |   |-- close.less
+|   |   |   |-- code.less
+|   |   |   |-- component-animations.less
+|   |   |   |-- dropdowns.less
+|   |   |   |-- forms.less
+|   |   |   |-- grid.less
+|   |   |   |-- hero-unit.less
+|   |   |   |-- labels-badges.less
+|   |   |   |-- layouts.less
+|   |   |   |-- media.less
+|   |   |   |-- mixins.less
+|   |   |   |-- modals.less
+|   |   |   |-- navbar.less
+|   |   |   |-- navs.less
+|   |   |   |-- pager.less
+|   |   |   |-- pagination.less
+|   |   |   |-- popovers.less
+|   |   |   |-- progress-bars.less
+|   |   |   |-- reset.less
+|   |   |   |-- scaffolding.less
+|   |   |   |-- sprites.less
+|   |   |   |-- tables.less
+|   |   |   |-- thumbnails.less
+|   |   |   |-- tooltip.less
+|   |   |   |-- type.less
+|   |   |   |-- utilities.less
+|   |   |   |-- variables.less
+|   |   |   '-- wells.less
+|   |   |-- fonts
+|   |   |   |-- SourceCodePro
+|   |   |   |   |-- SourceCodePro-Medium.ttf
+|   |   |   |   '-- SourceCodePro-Regular.ttf
+|   |   |   '-- SourceSansPro
+|   |   |       |-- SourceSansPro-It.ttf
+|   |   |       |-- SourceSansPro-Light.ttf
+|   |   |       |-- SourceSansPro-Regular.ttf
+|   |   |       '-- SourceSansPro-Semibold.ttf
+|   |   '-- images
+|   |       |-- brackets_icon.svg
+|   |       |-- edit-icon.svg
+|   |       |-- extension-manager-installed.svg
+|   |       |-- extension-manager-registry.svg
+|   |       |-- extension-manager-sprite.svg
+|   |       |-- find-replace-sprites-dark.svg
+|   |       |-- find-replace-sprites.svg
+|   |       |-- horiz-thumb-fw-outline.png
+|   |       |-- horizontal-dash.svg
+|   |       |-- jsTreeSprites-dark.svg
+|   |       |-- jsTreeSprites.svg
+|   |       |-- live_development_sprites.svg
+|   |       |-- no_content_bg.svg
+|   |       |-- no_content_bg_dark.svg
+|   |       |-- preview_bg.png
+|   |       |-- preview_bg_dark.png
+|   |       |-- scrollbar-mac-bg.png
+|   |       |-- scrollbar-mac-corner.png
+|   |       |-- select-triangles.svg
+|   |       |-- split-view-icons-dark.svg
+|   |       |-- split-view-icons.svg
+|   |       |-- themes-icon.svg
+|   |       |-- throbber.gif
+|   |       |-- topcoat-error-15.svg
+|   |       |-- topcoat-inactive-15.svg
+|   |       |-- topcoat-okay-15.svg
+|   |       |-- topcoat-search-20.svg
+|   |       |-- topcoat-settings-13.svg
+|   |       |-- topcoat-warning-15.svg
+|   |       |-- update_large_icon.svg
+|   |       |-- updateSprites.svg
+|   |       |-- vertical-dash.svg
+|   |       '-- vertical-thumb-fw-outline.png
+|   |-- thirdparty
+|   |   |-- globmatch.js
+|   |   |-- immutable.js
+|   |   |-- jquery-2.1.1.js
+|   |   |-- jquery-2.1.1.min.js
+|   |   |-- less-1.7.5.min.js
+|   |   |-- less-config.js
+|   |   |-- lodash.js
+|   |   |-- murmurhash3_gc.js
+|   |   |-- react.js
+|   |   |-- CodeMirror2
+|   |   |-- i18n
+|   |   |-- mustache
+|   |   |-- path-utils
+|   |   |-- requirejs
+|   |   |-- smart-auto-complete-local
+|   |   |   |-- jquery.smart_autocomplete.js
+|   |   |   |-- README.markdown
+|   |   |   |-- demo
+|   |   |   |   |-- countries.json
+|   |   |   |   |-- github_instant.html
+|   |   |   |   |-- index.html
+|   |   |   |   '-- qs_score.js
+|   |   |   '-- spec
+|   |   |       |-- SpecRunner.html
+|   |   |       |-- core
+|   |   |       |   |-- jquery.smart_autocomplete_spec.js
+|   |   |       |   '-- SpecHelper.js
+|   |   |       '-- framework
+|   |   |           |-- jasmine-jquery-1.1.3.js
+|   |   |           |-- jquery-1.4.4.min.js
+|   |   |           |-- jquery-1.5.min.js
+|   |   |           '-- jasmine-1.0.1
+|   |   |               |-- jasmine-html.js
+|   |   |               |-- jasmine.css
+|   |   |               |-- jasmine.js
+|   |   |               '-- MIT.LICENSE
+|   |   '-- text
+|   |-- utils
+|   |   |-- AnimationUtils.js
+|   |   |-- AppInit.js
+|   |   |-- Async.js
+|   |   |-- BuildInfoUtils.js
+|   |   |-- ColorUtils.js
+|   |   |-- Compatibility.js
+|   |   |-- DeprecationWarning.js
+|   |   |-- DragAndDrop.js
+|   |   |-- DropdownEventHandler.js
+|   |   |-- EventDispatcher.js
+|   |   |-- ExtensionLoader.js
+|   |   |-- ExtensionUtils.js
+|   |   |-- Global.js
+|   |   |-- KeyEvent.js
+|   |   |-- LocalizationUtils.js
+|   |   |-- NativeApp.js
+|   |   |-- NodeConnection.js
+|   |   |-- NodeDomain.js
+|   |   |-- PerfUtils.js
+|   |   |-- Resizer.js
+|   |   |-- ShellAPI.js
+|   |   |-- StringMatch.js
+|   |   |-- StringUtils.js
+|   |   |-- TokenUtils.js
+|   |   |-- UpdateNotification.js
+|   |   |-- UrlParams.js
+|   |   |-- ValidationUtils.js
+|   |   '-- ViewUtils.js
+|   |-- view
+|   |   |-- MainViewFactory.js
+|   |   |-- MainViewManager.js
+|   |   |-- Pane.js
+|   |   |-- PanelManager.js
+|   |   |-- ThemeManager.js
+|   |   |-- ThemeSettings.js
+|   |   |-- ThemeView.js
+|   |   |-- ViewCommandHandlers.js
+|   |   |-- ViewStateManager.js
+|   |   '-- WorkspaceManager.js
+|   '-- widgets
+|       |-- bootstrap-alerts.js
+|       |-- bootstrap-button.js
+|       |-- bootstrap-dropdown.js
+|       |-- bootstrap-modal.js
+|       |-- bootstrap-popover.js
+|       |-- bootstrap-scrollspy.js
+|       |-- bootstrap-tab.js
+|       |-- bootstrap-tooltip.js
+|       |-- bootstrap-twipsy-mod.js
+|       |-- DefaultDialogs.js
+|       |-- Dialogs.js
+|       |-- DropdownButton.js
+|       |-- ModalBar.js
+|       |-- PopUpManager.js
+|       |-- StatusBar.html
+|       '-- StatusBar.js
+|-- tasks
+|   |-- build.js
+|   |-- cla-exceptions.json
+|   |-- test.js
+|   |-- update-release-number.js
+|   |-- write-config.js
+|   '-- lib
+|       '-- common.js
+|-- test
+|   |-- BootstrapReporterView.css
+|   |-- BootstrapReporterView.js
+|   |-- jasmine.sh
+|   |-- PerformanceTestSuite.js
+|   |-- polyfills.js
+|   |-- README.md
+|   |-- SpecRunner.html
+|   |-- SpecRunner.js
+|   |-- TestPreferencesImpl.js
+|   |-- UnitTestReporter.js
+|   |-- UnitTestSuite.js
+|   |-- node
+|   |   |-- package.json
+|   |   |-- TestingDomain.js
+|   |   '-- node_modules
+|   |       '-- fs-extra
+|   |           |-- .npmignore
+|   |           |-- .travis.yml
+|   |           |-- CHANGELOG.md
+|   |           |-- LICENSE
+|   |           |-- package.json
+|   |           |-- README.md
+|   |           |-- lib
+|   |           |   |-- copy.js
+|   |           |   |-- create.js
+|   |           |   |-- index.js
+|   |           |   |-- mkdir.js
+|   |           |   |-- output.js
+|   |           |   '-- remove.js
+|   |           |-- node_modules
+|   |           |   |-- .bin
+|   |           |   |   '-- ncp
+|   |           |   |-- jsonfile
+|   |           |   |   |-- .npmignore
+|   |           |   |   |-- .travis.yml
+|   |           |   |   |-- CHANGELOG.md
+|   |           |   |   |-- LICENSE
+|   |           |   |   |-- package.json
+|   |           |   |   |-- README.md
+|   |           |   |   |-- lib
+|   |           |   |   |   '-- jsonfile.js
+|   |           |   |   '-- test
+|   |           |   |       |-- jsonfile.test.js
+|   |           |   |       |-- mocha.opts
+|   |           |   |       '-- resources
+|   |           |   |           '-- .gitkeep
+|   |           |   |-- mkdirp
+|   |           |   |   |-- .npmignore
+|   |           |   |   |-- .travis.yml
+|   |           |   |   |-- index.js
+|   |           |   |   |-- LICENSE
+|   |           |   |   |-- package.json
+|   |           |   |   |-- readme.markdown
+|   |           |   |   |-- examples
+|   |           |   |   |   '-- pow.js
+|   |           |   |   '-- test
+|   |           |   |       |-- chmod.js
+|   |           |   |       |-- clobber.js
+|   |           |   |       |-- mkdirp.js
+|   |           |   |       |-- perm.js
+|   |           |   |       |-- perm_sync.js
+|   |           |   |       |-- race.js
+|   |           |   |       |-- rel.js
+|   |           |   |       |-- return.js
+|   |           |   |       |-- return_sync.js
+|   |           |   |       |-- root.js
+|   |           |   |       |-- sync.js
+|   |           |   |       |-- umask.js
+|   |           |   |       '-- umask_sync.js
+|   |           |   |-- ncp
+|   |           |   |   |-- .npmignore
+|   |           |   |   |-- .travis.yml
+|   |           |   |   |-- LICENSE.md
+|   |           |   |   |-- package.json
+|   |           |   |   |-- README.md
+|   |           |   |   |-- bin
+|   |           |   |   |   '-- ncp
+|   |           |   |   |-- lib
+|   |           |   |   |   '-- ncp.js
+|   |           |   |   '-- test
+|   |           |   |       |-- ncp-test.js
+|   |           |   |       '-- fixtures
+|   |           |   |           '-- src
+|   |           |   |               |-- a
+|   |           |   |               |-- b
+|   |           |   |               |-- c
+|   |           |   |               |-- d
+|   |           |   |               |-- e
+|   |           |   |               |-- f
+|   |           |   |               '-- sub
+|   |           |   |                   |-- a
+|   |           |   |                   '-- b
+|   |           |   '-- rimraf
+|   |           |       |-- AUTHORS
+|   |           |       |-- LICENSE
+|   |           |       |-- package.json
+|   |           |       |-- README.md
+|   |           |       |-- rimraf.js
+|   |           |       |-- node_modules
+|   |           |       |   '-- graceful-fs
+|   |           |       |       |-- .npmignore
+|   |           |       |       |-- graceful-fs.js
+|   |           |       |       |-- LICENSE
+|   |           |       |       |-- package.json
+|   |           |       |       |-- README.md
+|   |           |       |       '-- test
+|   |           |       |           '-- open.js
+|   |           |       '-- test
+|   |           |           |-- run.sh
+|   |           |           |-- setup.sh
+|   |           |           |-- test-async.js
+|   |           |           '-- test-sync.js
+|   |           '-- test
+|   |               |-- copy.test.js
+|   |               |-- create.test.js
+|   |               |-- mkdir.test.js
+|   |               |-- mocha.opts
+|   |               |-- output.test.js
+|   |               |-- read.test.js
+|   |               '-- remove.test.js
+|   |-- perf
+|   |   |-- Performance-test.js
+|   |   '-- OpenFile-perf-files
+|   |       |-- blank.js
+|   |       |-- brackets-concat.js
+|   |       |-- England(Chinese).htm
+|   |       |-- InlineWidget.js
+|   |       |-- jquery.mobile-1.1.0.css
+|   |       |-- jquery.mobile-1.1.0.js
+|   |       |-- jquery.mobile-1.1.0.min.css
+|   |       |-- jquery.mobile-1.1.0.min.js
+|   |       |-- jquery_ui_index.html
+|   |       '-- quiet-scrollbars.css
+|   |-- smokes
+|   |   |-- citrus completed
+|   |   |   |-- index.html
+|   |   |   |-- css
+|   |   |   |   |-- citrus_mq.css
+|   |   |   |   |-- desktop.css
+|   |   |   |   |-- phone.css
+|   |   |   |   '-- tablet.css
+|   |   |   '-- images
+|   |   |       |-- events.jpg
+|   |   |       |-- icon_chevron.png
+|   |   |       |-- icon_facebook.png
+|   |   |       |-- icon_twitter.png
+|   |   |       |-- lrg_hero.jpg
+|   |   |       |-- lrg_logo.png
+|   |   |       |-- med_hero.jpg
+|   |   |       |-- med_logo.png
+|   |   |       |-- sml_logo.png
+|   |   |       '-- specials.jpg
+|   |   '-- server-tests
+|   |       |-- pathRel.html
+|   |       |-- pathRoot.html
+|   |       |-- server.php
+|   |       |-- css
+|   |       |   |-- citrus_mq.css
+|   |       |   |-- desktop.css
+|   |       |   |-- phone.css
+|   |       |   '-- tablet.css
+|   |       '-- images
+|   |           |-- events.jpg
+|   |           |-- icon_chevron.png
+|   |           |-- icon_facebook.png
+|   |           |-- icon_twitter.png
+|   |           |-- lrg_hero.jpg
+|   |           |-- lrg_logo.png
+|   |           |-- med_hero.jpg
+|   |           |-- med_logo.png
+|   |           |-- sml_logo.png
+|   |           '-- specials.jpg
+|   |-- spec
+|   |   |-- Async-test.js
+|   |   |-- CodeHint-test.js
+|   |   |-- CodeHintUtils-test.js
+|   |   |-- CodeInspection-test.js
+|   |   |-- CommandManager-test.js
+|   |   |-- CSSInlineEdit-test.js
+|   |   |-- CSSUtils-test.js
+|   |   |-- Document-test.js
+|   |   |-- DocumentCommandHandlers-test.js
+|   |   |-- DocumentManager-test.js
+|   |   |-- DragAndDrop-test.js
+|   |   |-- Editor-test.js
+|   |   |-- EditorCommandHandlers-test.js
+|   |   |-- EditorManager-test.js
+|   |   |-- EditorOptionHandlers-test.js
+|   |   |-- EditorRedraw-test.js
+|   |   |-- EventDispatcher-test.js
+|   |   |-- ExtensionInstallation-test.js
+|   |   |-- ExtensionLoader-test.js
+|   |   |-- ExtensionManager-test.js
+|   |   |-- ExtensionUtils-test.js
+|   |   |-- FileFilters-test.js
+|   |   |-- FileSystem-test.js
+|   |   |-- FileTreeView-test.js
+|   |   |-- FileTreeViewModel-test.js
+|   |   |-- FileUtils-test.js
+|   |   |-- FindInFiles-test.js
+|   |   |-- FindReplace-test.js
+|   |   |-- HTMLInstrumentation-test.js
+|   |   |-- HTMLSimpleDOM-test.js
+|   |   |-- HTMLTokenizer-test.js
+|   |   |-- InlineEditorProviders-test.js
+|   |   |-- InstallExtensionDialog-test.js
+|   |   |-- JSUtils-test.js
+|   |   |-- KeyBindingManager-test.js
+|   |   |-- LanguageManager-test.js
+|   |   |-- LiveDevelopment-test.js
+|   |   |-- LiveDevelopmentMultiBrowser-test.js
+|   |   |-- LowLevelFileIO-test.js
+|   |   |-- MainViewFactory-test.js
+|   |   |-- MainViewManager-test.js
+|   |   |-- Menu-test.js
+|   |   |-- MockFileSystemImpl.js
+|   |   |-- MockFileSystemModel.js
+|   |   |-- MultiRangeInlineEditor-test.js
+|   |   |-- NativeMenu-test.js
+|   |   |-- NodeConnection-test.js
+|   |   |-- Pane-test.js
+|   |   |-- PhantomHelper.js
+|   |   |-- PreferencesBase-test.js
+|   |   |-- PreferencesManager-test.js
+|   |   |-- ProjectManager-test.js
+|   |   |-- ProjectModel-test.js
+|   |   |-- QuickOpen-test.js
+|   |   |-- RemoteFunctions-test.js
+|   |   |-- SpecRunnerUtils.js
+|   |   |-- StringMatch-test.js
+|   |   |-- StringUtils-test.js
+|   |   |-- TextRange-test.js
+|   |   |-- ThemeManager-test.js
+|   |   |-- UpdateNotification-test.js
+|   |   |-- UrlParams-test.js
+|   |   |-- ValidationUtils-test.js
+|   |   |-- ViewCommandHandlers-test.js
+|   |   |-- ViewFactory-test.js
+|   |   |-- ViewUtils-test.js
+|   |   |-- WorkingSetSort-test.js
+|   |   |-- WorkingSetView-test.js
+|   |   |-- CodeHint-test-files
+|   |   |   |-- test.clj
+|   |   |   '-- test1.html
+|   |   |-- CodeInspection-test-files
+|   |   |   |-- errors.css
+|   |   |   |-- errors.js
+|   |   |   '-- no-errors.js
+|   |   |-- CSSInlineEdit-test-files
+|   |   |   |-- index-css.html
+|   |   |   |-- index-less.html
+|   |   |   |-- css
+|   |   |   |   |-- test.css
+|   |   |   |   '-- test2.css
+|   |   |   |-- less
+|   |   |   |   |-- test.less
+|   |   |   |   '-- test2.less
+|   |   |   '-- scss
+|   |   |       '-- test.scss
+|   |   |-- CSSUtils-test-files
+|   |   |   |-- bootstrap.css
+|   |   |   |-- contexts.css
+|   |   |   |-- edit.js
+|   |   |   |-- embedded.html
+|   |   |   |-- escaped-identifiers.css
+|   |   |   |-- groups.css
+|   |   |   |-- include-mixin.scss
+|   |   |   |-- issue-403-test.css
+|   |   |   |-- mixins.less
+|   |   |   |-- navbar.scss
+|   |   |   |-- offsets.css
+|   |   |   |-- panels.less
+|   |   |   |-- parent-selector.less
+|   |   |   |-- print.less
+|   |   |   |-- property-list.css
+|   |   |   |-- ranges.css
+|   |   |   |-- regions.css
+|   |   |   |-- selector-positions.css
+|   |   |   |-- simple.css
+|   |   |   |-- sprint4.css
+|   |   |   |-- table&button.scss
+|   |   |   |-- universal.css
+|   |   |   |-- variables.less
+|   |   |   '-- variables.scss
+|   |   |-- Document-test-files
+|   |   |   |-- test.css
+|   |   |   |-- test.html
+|   |   |   '-- test.js
+|   |   |-- DocumentCommandHandlers-test-files
+|   |   |   |-- couz.png
+|   |   |   |-- couz2.png
+|   |   |   |-- test.js
+|   |   |   '-- test2.js
+|   |   |-- EditorCommandHandlers-test-files
+|   |   |   |-- test.css
+|   |   |   |-- test.html
+|   |   |   '-- test.js
+|   |   |-- EditorOptionHandlers-test-files
+|   |   |   |-- test.css
+|   |   |   |-- test.html
+|   |   |   '-- test.js
+|   |   |-- extension-test-files
+|   |   |   |-- badname.zip
+|   |   |   |-- basic-valid-extension-0.9.zip
+|   |   |   |-- basic-valid-extension-2.0.zip
+|   |   |   |-- basic-valid-extension.zip
+|   |   |   |-- basic-valid-theme-1.0.zip
+|   |   |   |-- bogus-top-dir.zip
+|   |   |   |-- has-macosx.zip
+|   |   |   |-- incompatible-version.zip
+|   |   |   |-- invalid-brackets-version.zip
+|   |   |   |-- invalid-json.zip
+|   |   |   |-- invalid-version.zip
+|   |   |   |-- invalid-zip-file.zip
+|   |   |   |-- main-in-directory.zip
+|   |   |   |-- missing-main.zip
+|   |   |   |-- missing-name-version.zip
+|   |   |   |-- missing-package-json-update.zip
+|   |   |   |-- missing-package-json.zip
+|   |   |   |-- one-level-extension-master.zip
+|   |   |   |-- with-symlink.zip
+|   |   |   |-- added-package-json-test
+|   |   |   |   '-- missing-package-json.zip
+|   |   |   '-- basic-valid-theme-1.0
+|   |   |       |-- package.json
+|   |   |       '-- theme.less
+|   |   |-- ExtensionLoader-test-files
+|   |   |   |-- BadRequire
+|   |   |   |   '-- main.js
+|   |   |   |-- BadRequireConfig
+|   |   |   |   '-- requirejs-config.json
+|   |   |   |-- InitFail
+|   |   |   |   '-- main.js
+|   |   |   |-- InitFailWithError
+|   |   |   |   '-- main.js
+|   |   |   |-- InitFailWithErrorAsync
+|   |   |   |   '-- main.js
+|   |   |   |-- InitResolved
+|   |   |   |   '-- main.js
+|   |   |   |-- InitResolvedAsync
+|   |   |   |   '-- main.js
+|   |   |   |-- InitRuntimeError
+|   |   |   |   '-- main.js
+|   |   |   |-- InitTimeout
+|   |   |   |   '-- main.js
+|   |   |   |-- NoInit
+|   |   |   |   '-- main.js
+|   |   |   '-- RequireJSConfig
+|   |   |       |-- bar.js
+|   |   |       |-- main.js
+|   |   |       '-- requirejs-config.json
+|   |   |-- ExtensionManager-test-files
+|   |   |   |-- mockExtensionList.json
+|   |   |   |-- mockRegistry.json
+|   |   |   |-- mockRegistryForSearch.json
+|   |   |   |-- mockRegistryThemes.json
+|   |   |   |-- auto-install-extensions1
+|   |   |   |   |-- mock-extension-v1.0.0.zip
+|   |   |   |   |-- not-an-extension.zip
+|   |   |   |   '-- should-be-ignored.txt
+|   |   |   |-- auto-install-extensions2
+|   |   |   |   '-- mock-extension-v1.1.1.zip
+|   |   |   |-- auto-install-extensions3
+|   |   |   |   |-- a-mock-extension-v1.0.0.zip
+|   |   |   |   |-- b-mock-extension-v1.1.1.zip
+|   |   |   |   '-- c-mock-extension-v1.1.0.zip
+|   |   |   |-- default
+|   |   |   |   '-- mock-extension-1
+|   |   |   |       |-- main.js
+|   |   |   |       '-- package.json
+|   |   |   |-- dev
+|   |   |   |   '-- mock-extension-2
+|   |   |   |       |-- main.js
+|   |   |   |       '-- package.json
+|   |   |   '-- user
+|   |   |       |-- install-later-extension
+|   |   |       |   |-- main.js
+|   |   |       |   '-- package.json
+|   |   |       |-- mock-extension-3
+|   |   |       |   |-- main.js
+|   |   |       |   '-- package.json
+|   |   |       |-- mock-extension-4
+|   |   |       |   |-- main.js
+|   |   |       |   '-- package.json
+|   |   |       '-- mock-legacy-extension
+|   |   |           '-- main.js
+|   |   |-- ExtensionUtils-test-files
+|   |   |   |-- bad-import.css
+|   |   |   |-- basic.css
+|   |   |   |-- basic.less
+|   |   |   |-- less.text
+|   |   |   '-- sub dir
+|   |   |       |-- fifth.less
+|   |   |       |-- fourth.css
+|   |   |       |-- fourth.less
+|   |   |       |-- second.css
+|   |   |       '-- third.css
+|   |   |-- FindReplace-known-goods
+|   |   |   |-- changed-file
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- regexp-case-insensitive
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- regexp-case-sensitive
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- regexp-dollar-replace
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- regexp-replace-multiline
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   |-- css
+|   |   |   |   |   '-- foo.css
+|   |   |   |   '-- images
+|   |   |   |       '-- icon_twitter.png
+|   |   |   |-- regexp-replace-multiline-partial
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   |-- css
+|   |   |   |   |   '-- foo.css
+|   |   |   |   '-- images
+|   |   |   |       '-- icon_twitter.png
+|   |   |   |-- regexp-zero-length
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- simple-case-insensitive
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- simple-case-insensitive-except-foo.css
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- simple-case-insensitive-large
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- bar2.txt
+|   |   |   |   |-- bar3.txt
+|   |   |   |   |-- bar4.txt
+|   |   |   |   |-- bar5.txt
+|   |   |   |   |-- bar6.txt
+|   |   |   |   |-- bar7.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   |-- foo2.html
+|   |   |   |   |-- foo2.js
+|   |   |   |   |-- foo3.html
+|   |   |   |   |-- foo3.js
+|   |   |   |   |-- foo4.html
+|   |   |   |   |-- foo4.js
+|   |   |   |   |-- foo5.html
+|   |   |   |   |-- foo5.js
+|   |   |   |   |-- foo6.html
+|   |   |   |   |-- foo6.js
+|   |   |   |   |-- foo7.html
+|   |   |   |   |-- foo7.js
+|   |   |   |   '-- css
+|   |   |   |       |-- foo.css
+|   |   |   |       |-- foo2.css
+|   |   |   |       |-- foo3.css
+|   |   |   |       |-- foo4.css
+|   |   |   |       |-- foo5.css
+|   |   |   |       |-- foo6.css
+|   |   |   |       '-- foo7.css
+|   |   |   |-- simple-case-insensitive-modified
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- simple-case-insensitive-only-foo.css
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- simple-case-insensitive-unchecked
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   |-- simple-case-sensitive
+|   |   |   |   |-- bar.txt
+|   |   |   |   |-- foo.html
+|   |   |   |   |-- foo.js
+|   |   |   |   '-- css
+|   |   |   |       '-- foo.css
+|   |   |   '-- unchanged
+|   |   |       |-- bar.txt
+|   |   |       |-- foo.html
+|   |   |       |-- foo.js
+|   |   |       '-- css
+|   |   |           '-- foo.css
+|   |   |-- FindReplace-test-files
+|   |   |   |-- bar.txt
+|   |   |   |-- foo.html
+|   |   |   |-- foo.js
+|   |   |   |-- css
+|   |   |   |   '-- foo.css
+|   |   |   '-- images
+|   |   |       '-- icon_twitter.png
+|   |   |-- FindReplace-test-files-large
+|   |   |   |-- bar.txt
+|   |   |   |-- bar2.txt
+|   |   |   |-- bar3.txt
+|   |   |   |-- bar4.txt
+|   |   |   |-- bar5.txt
+|   |   |   |-- bar6.txt
+|   |   |   |-- bar7.txt
+|   |   |   |-- foo.html
+|   |   |   |-- foo.js
+|   |   |   |-- foo2.html
+|   |   |   |-- foo2.js
+|   |   |   |-- foo3.html
+|   |   |   |-- foo3.js
+|   |   |   |-- foo4.html
+|   |   |   |-- foo4.js
+|   |   |   |-- foo5.html
+|   |   |   |-- foo5.js
+|   |   |   |-- foo6.html
+|   |   |   |-- foo6.js
+|   |   |   |-- foo7.html
+|   |   |   |-- foo7.js
+|   |   |   '-- css
+|   |   |       |-- foo.css
+|   |   |       |-- foo2.css
+|   |   |       |-- foo3.css
+|   |   |       |-- foo4.css
+|   |   |       |-- foo5.css
+|   |   |       |-- foo6.css
+|   |   |       '-- foo7.css
+|   |   |-- FindReplace-test-files-manyhits
+|   |   |   |-- manyhits-1.txt
+|   |   |   '-- manyhits-2.txt
+|   |   |-- HTMLInstrumentation-test-files
+|   |   |   |-- invalidHTML.html
+|   |   |   |-- omitEndTags.html
+|   |   |   |-- REC-widgets-20121127.html
+|   |   |   '-- wellformed.html
+|   |   |-- InlineEditorProviders-test-files
+|   |   |   |-- test1.css
+|   |   |   |-- test1.html
+|   |   |   |-- test1.php
+|   |   |   '-- testOneRuleFile.css
+|   |   |-- JSUtils-test-files
+|   |   |   |-- braceEnd.js
+|   |   |   |-- edit.js
+|   |   |   |-- eof.js
+|   |   |   |-- eof2.js
+|   |   |   |-- invalid.js
+|   |   |   |-- jquery-1.7.js
+|   |   |   |-- simple.js
+|   |   |   |-- test1inline.js
+|   |   |   |-- test1main.js
+|   |   |   '-- tricky.js
+|   |   |-- KeyBindingManager-test-files
+|   |   |   |-- blank.json
+|   |   |   |-- duplicateShortcuts.json
+|   |   |   |-- empty.json
+|   |   |   |-- invalid.json
+|   |   |   |-- invalidKeys.json
+|   |   |   |-- keymap.json
+|   |   |   |-- keymap1.json
+|   |   |   |-- macKeymap.json
+|   |   |   |-- macKeymap1.json
+|   |   |   |-- macRestrictedShortcut.json
+|   |   |   |-- multipleShortcuts.json
+|   |   |   |-- reassignCopy.json
+|   |   |   |-- restrictedShortcut.json
+|   |   |   '-- whitespace.json
+|   |   |-- LiveDevelopment-chrome-user-data
+|   |   |   |-- Local State
+|   |   |   '-- Default
+|   |   |       |-- Archived History
+|   |   |       |-- Bookmarks
+|   |   |       |-- Bookmarks.bak
+|   |   |       |-- Cookies
+|   |   |       |-- Current Session
+|   |   |       |-- Current Tabs
+|   |   |       |-- Favicons
+|   |   |       |-- History
+|   |   |       |-- History Index 2012-04
+|   |   |       |-- History Provider Cache
+|   |   |       |-- Last Session
+|   |   |       |-- Last Tabs
+|   |   |       |-- Network Action Predictor
+|   |   |       |-- Preferences
+|   |   |       |-- Shortcuts
+|   |   |       |-- Top Sites
+|   |   |       |-- Visited Links
+|   |   |       |-- Web Data
+|   |   |       '-- User StyleSheets
+|   |   |           '-- Custom.css
+|   |   |-- LiveDevelopment-MultiBrowser-test-files
+|   |   |   |-- import1.css
+|   |   |   |-- index.html
+|   |   |   |-- simple1.css
+|   |   |   |-- simple1.html
+|   |   |   |-- simple1.js
+|   |   |   |-- simpleShared.css
+|   |   |   '-- sub
+|   |   |       '-- test.css
+|   |   |-- LiveDevelopment-test-files
+|   |   |   |-- iframe.css
+|   |   |   |-- iframe.html
+|   |   |   |-- notlive.css
+|   |   |   |-- simple1.css
+|   |   |   |-- simple1.html
+|   |   |   |-- simple1.js
+|   |   |   |-- simple1iframe.html
+|   |   |   |-- simple1Query.html
+|   |   |   |-- simpleShared.css
+|   |   |   |-- test.xhtml
+|   |   |   |-- dynamic-project-1
+|   |   |   |   '-- sub
+|   |   |   |       '-- sub2
+|   |   |   |           |-- index.php
+|   |   |   |           '-- test.css
+|   |   |   |-- dynamic-project-2
+|   |   |   |   '-- sub
+|   |   |   |       |-- index.php
+|   |   |   |       '-- sub2
+|   |   |   |           '-- test.css
+|   |   |   |-- dynamic-project-3
+|   |   |   |   |-- index.php
+|   |   |   |   '-- sub
+|   |   |   |       '-- sub2
+|   |   |   |           '-- test.css
+|   |   |   |-- dynamic-project-4
+|   |   |   |   |-- index.php
+|   |   |   |   '-- sub
+|   |   |   |       |-- index.php
+|   |   |   |       '-- sub2
+|   |   |   |           |-- index.php
+|   |   |   |           '-- test.css
+|   |   |   |-- dynamic-project-5
+|   |   |   |   |-- index.php
+|   |   |   |   '-- sub
+|   |   |   |       |-- index.php
+|   |   |   |       |-- test.css
+|   |   |   |       '-- sub2
+|   |   |   |           '-- index.php
+|   |   |   |-- dynamic-project-6
+|   |   |   |   |-- top1
+|   |   |   |   |   '-- index.php
+|   |   |   |   '-- top2
+|   |   |   |       '-- test.css
+|   |   |   |-- static-project-1
+|   |   |   |   '-- sub
+|   |   |   |       '-- sub2
+|   |   |   |           |-- index.html
+|   |   |   |           '-- test.css
+|   |   |   |-- static-project-2
+|   |   |   |   '-- sub
+|   |   |   |       |-- index.html
+|   |   |   |       '-- sub2
+|   |   |   |           '-- test.css
+|   |   |   |-- static-project-3
+|   |   |   |   |-- index.html
+|   |   |   |   '-- sub
+|   |   |   |       '-- sub2
+|   |   |   |           '-- test.css
+|   |   |   |-- static-project-4
+|   |   |   |   |-- index.html
+|   |   |   |   '-- sub
+|   |   |   |       |-- index.html
+|   |   |   |       '-- sub2
+|   |   |   |           |-- index.html
+|   |   |   |           '-- test.css
+|   |   |   |-- static-project-5
+|   |   |   |   |-- index.html
+|   |   |   |   '-- sub
+|   |   |   |       |-- index.html
+|   |   |   |       |-- test.css
+|   |   |   |       '-- sub2
+|   |   |   |           '-- index.html
+|   |   |   '-- static-project-6
+|   |   |       |-- top1
+|   |   |       |   '-- index.html
+|   |   |       '-- top2
+|   |   |           '-- test.css
+|   |   |-- LowLevelFileIO-test-files
+|   |   |   |-- emptyfile.txt
+|   |   |   |-- es_small_utf8.html
+|   |   |   |-- file_one.txt
+|   |   |   |-- file_three.txt
+|   |   |   |-- file_two.txt
+|   |   |   |-- ru_bad_utf8.html
+|   |   |   |-- ru_utf16.html
+|   |   |   |-- ru_utf16_noBOM.html
+|   |   |   |-- ru_utf32.html
+|   |   |   |-- ru_utf32_noBOM.html
+|   |   |   |-- ru_utf8.html
+|   |   |   |-- ru_utf8_wBOM.html
+|   |   |   |-- tree.jpg
+|   |   |   |-- write_test.txt
+|   |   |   |-- cant_read_here
+|   |   |   |   '-- readme.txt
+|   |   |   |-- cant_write_here
+|   |   |   |   '-- readme.txt
+|   |   |   '-- rename_me
+|   |   |       '-- hello.txt
+|   |   |-- MainViewFactory-test-files
+|   |   |   |-- index.html
+|   |   |   |-- css
+|   |   |   |   |-- citrus_mq.css
+|   |   |   |   |-- desktop.css
+|   |   |   |   |-- phone.css
+|   |   |   |   '-- tablet.css
+|   |   |   '-- images
+|   |   |       |-- events.jpg
+|   |   |       |-- icon_chevron.png
+|   |   |       |-- icon_facebook.png
+|   |   |       |-- icon_twitter.png
+|   |   |       |-- lrg_hero.jpg
+|   |   |       |-- lrg_logo.png
+|   |   |       |-- med_hero.jpg
+|   |   |       |-- med_logo.png
+|   |   |       |-- sml_logo.png
+|   |   |       '-- specials.jpg
+|   |   |-- MainViewManager-test-files
+|   |   |   |-- test.css
+|   |   |   |-- test.html
+|   |   |   '-- test.js
+|   |   |-- NodeConnection-test-files
+|   |   |   |-- BinaryTestCommands.js
+|   |   |   |-- TestCommandsError.js
+|   |   |   |-- TestCommandsOne.js
+|   |   |   '-- TestCommandsTwo.js
+|   |   |-- PreferencesBase-test-files
+|   |   |   |-- .brackets.json
+|   |   |   '-- empty.json
+|   |   |-- ProjectManager-test-files
+|   |   |   |-- file.js
+|   |   |   |-- directory
+|   |   |   |   '-- interiorfile.js
+|   |   |   '-- toDelete1
+|   |   |       '-- file.js
+|   |   |-- QuickOpen-test-files
+|   |   |   |-- lotsOfLines.html
+|   |   |   '-- somelines.html
+|   |   |-- test-image-files
+|   |   |   |-- eye.jpg
+|   |   |   '-- thermo.jpg
+|   |   |-- Theme-test-files
+|   |   |   |-- empty.css
+|   |   |   |-- empty.less
+|   |   |   |-- empty.txt
+|   |   |   |-- scrollbars.css
+|   |   |   '-- simple-scrollbars.css
+|   |   |-- UpdateNotification-test-files
+|   |   |   |-- versionInfo.json
+|   |   |   |-- versionInfoBroken.json
+|   |   |   '-- versionInfoXSS.json
+|   |   |-- ViewCommandHandlers-test-files
+|   |   |   |-- test.css
+|   |   |   '-- test.html
+|   |   '-- WorkingSetView-test-files
+|   |       |-- file_four.html
+|   |       |-- file_one.js
+|   |       |-- file_three.js
+|   |       |-- file_two.js
+|   |       |-- file_zero.css
+|   |       '-- directory
+|   |           |-- file_one.js
+|   |           '-- directory
+|   |               '-- file_one.js
+|   '-- thirdparty
+|       |-- jasmine-jquery-1.3.1.js
+|       |-- jquery.mockjax.js
+|       |-- bootstrap2
+|       |   |-- css
+|       |   |   |-- bootstrap-responsive.css
+|       |   |   |-- bootstrap-responsive.min.css
+|       |   |   |-- bootstrap.css
+|       |   |   '-- bootstrap.min.css
+|       |   |-- img
+|       |   |   |-- glyphicons-halflings-white.png
+|       |   |   '-- glyphicons-halflings.png
+|       |   '-- js
+|       |       |-- bootstrap.js
+|       |       '-- bootstrap.min.js
+|       |-- jasmine-core
+|       |   |-- jasmine-html.js
+|       |   |-- jasmine.css
+|       |   |-- jasmine.js
+|       |   |-- json2.js
+|       |   |-- spec
+|       |   |-- version.rb
+|       |   '-- example
+|       |       |-- SpecRunner.html
+|       |       |-- spec
+|       |       |   |-- PlayerSpec.js
+|       |       |   '-- SpecHelper.js
+|       |       '-- src
+|       |           |-- Player.js
+|       |           '-- Song.js
+|       '-- jasmine-reporters
+|           |-- jasmine.junit_reporter.js
+|           |-- LICENSE
+|           '-- README.markdown
+'-- tools
+    |-- restore_installed_build.bat
+    |-- restore_installed_build.sh
+    |-- setup_for_hacking.bat
+    |-- setup_for_hacking.sh
+    |-- setup_server_smokes.bat
+    '-- setup_server_smokes.sh
