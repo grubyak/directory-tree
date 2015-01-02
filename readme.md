@@ -2,7 +2,7 @@
 
 Simple Python script generating pretty directory tree visualisation.
 
-Sample output:
+Sample output ([another example](sample-output.txt)):
 ```
 grubyak@peso directory-tree $ ./tree.py
 directory-tree
